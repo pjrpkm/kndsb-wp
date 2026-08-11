@@ -74,7 +74,6 @@ function kndsb_enqueue_assets() {
 		'kndsb-post-card'  => 'styles/components/post-card.css',
 		'kndsb-tables'     => 'styles/components/table.css',
 		'kndsb-hero'       => 'styles/components/hero.css',
-		'kndsb-page-intro' => 'styles/components/page-intro.css',
 		'kndsb-buttons'    => 'styles/components/buttons.css',
 		'kndsb-article'    => 'styles/components/article.css',
 	);

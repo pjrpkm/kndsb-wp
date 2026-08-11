@@ -1,0 +1,28 @@
+# Operating-system metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Editor and IDE state
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Dependency and test output (when tooling is introduced)
+node_modules/
+vendor/
+coverage/
+test-results/
+playwright-report/
+
+# WordPress development environment
+.wp-env.json.override

@@ -33,7 +33,7 @@
   color: #fff;
 }
 
-.kndsb-featured-grid__title { font-size: 16px; font-weight: 400; line-height: 1.25; margin: 0; }
+.kndsb-featured-grid__title { font-size: 16px; font-weight: 700; line-height: 1.25; margin: 0; }
 .kndsb-featured-grid__item--primary .kndsb-featured-grid__title { font-size: 28px; line-height: 1.22; max-width: 580px; }
 .kndsb-featured-grid__meta { font-size: 11px; font-weight: 600; margin-top: 12px; }
 

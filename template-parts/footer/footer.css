@@ -1,0 +1,36 @@
+/** KNDSB footer component. Layout wrappers are Client First; this file owns only footer presentation. */
+.kndsb-footer { clear: both; color: var(--kndsb-color-white); width: 100%; }
+.kndsb-footer__main { background: var(--kndsb-color-orange); }
+.kndsb-footer__inner {
+  align-items: start;
+  display: grid;
+  gap: clamp(1.875rem, 6vw, 5rem);
+  grid-template-columns: minmax(0, .65fr) minmax(0, 1.75fr) minmax(0, .70fr);
+  width: 100%;
+}
+.kndsb-footer__column { min-width: 0; }
+.kndsb-footer__logo { display: block; height: auto; max-width: 11.875rem; object-fit: contain; width: auto; }
+.kndsb-footer__details,
+.kndsb-footer__text { font-size: .75rem; line-height: 1.65; margin-top: var(--kndsb-space-3); }
+.kndsb-footer__title { color: var(--kndsb-color-white); font-size: .8125rem; font-weight: 800; letter-spacing: .035em; margin: 0 0 1.25rem; text-transform: uppercase; }
+.kndsb-footer__menu { display: grid; gap: .5625rem; list-style: none; margin: 0; padding: 0; }
+.kndsb-site .kndsb-footer a { color: var(--kndsb-color-white); }
+.kndsb-site .kndsb-footer a:hover { color: var(--kndsb-color-blue); text-decoration: none; }
+.kndsb-footer__certifications { align-items: center; display: flex; flex-wrap: wrap; gap: .875rem; margin-top: var(--kndsb-space-3); }
+.kndsb-footer__certifications .widget { margin: 0; }
+.kndsb-footer__certifications img { background: var(--kndsb-color-white); max-height: 4.6875rem; max-width: 10.3125rem; object-fit: contain; padding: .3125rem; }
+.kndsb-footer__recognition-logo { display: block; height: auto; margin-left: auto; margin-right: 0; max-width: 11.875rem; width: auto; }
+.kndsb-footer__bottom { background: var(--kndsb-color-black); min-height: 0; }
+.kndsb-footer__bottom .padding-section-small { min-height: 0; padding-bottom: var(--kndsb-space-1); padding-top: var(--kndsb-space-1); }
+.kndsb-footer__bottom-inner { min-height: 0; padding: 0; width: 100%; }
+.kndsb-footer__copyright { color: var(--kndsb-color-white); font-size: .6875rem; line-height: 1.2; margin: 0; padding: 0; }
+
+@media (min-width: 56.25rem) {
+  .kndsb-footer__inner > :nth-child(2) { justify-self: center; text-align: left; }
+  .kndsb-footer__column--links { justify-self: end; text-align: right; }
+}
+@media (max-width: 56.1875rem) {
+  .kndsb-footer__inner { grid-template-columns: 1fr; }
+  .kndsb-footer__logo { max-width: 14.375rem; }
+  .kndsb-footer__recognition-logo { margin-left: 0; }
+}

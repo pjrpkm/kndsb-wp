@@ -1,0 +1,234 @@
+:root {
+  --kndsb-color-primary: #005a9c;
+  --kndsb-color-primary-dark: #003f70;
+  --kndsb-color-accent: #f2c300;
+  --kndsb-color-ink: #17202a;
+  --kndsb-color-link: var(--kndsb-color-orange);
+  --kndsb-content-width: var(--kndsb-container-main);
+}
+
+.editor-styles-wrapper {
+  color: var(--kndsb-color-ink) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.editor-styles-wrapper .is-root-container > .wp-block {
+  box-sizing: border-box;
+  max-width: 760px;
+  width: 100%;
+}
+
+.editor-styles-wrapper .is-root-container > .wp-block[data-align="wide"] {
+  max-width: var(--kndsb-container-main);
+}
+
+.editor-styles-wrapper .is-root-container > .wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.editor-styles-wrapper .is-root-container > .wp-block[data-align="full"] > .wp-block-group__inner-container,
+.editor-styles-wrapper .is-root-container > .wp-block[data-align="full"] > .kndsb-sport-page {
+  width: 100%;
+}
+
+.editor-styles-wrapper .kndsb-hero {
+  background: linear-gradient(120deg, var(--kndsb-color-primary-dark), var(--kndsb-color-primary));
+  color: #fff;
+  padding: 4rem;
+}
+
+.editor-styles-wrapper .kndsb-hero__title {
+  color: #fff;
+}
+
+/* Keep nested KNDSB sport blocks identical to their public four-column layout. */
+.editor-styles-wrapper .wp-block-kndsb-sports-overview {
+  box-sizing: border-box;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .kndsb-sports-overview__grid,
+.editor-styles-wrapper .kndsb-sports-overview__grid > .block-editor-inner-blocks,
+.editor-styles-wrapper .kndsb-sports-overview__grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  box-sizing: border-box;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .kndsb-sports-overview__grid > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block-kndsb-sport-card {
+  box-sizing: border-box;
+  margin: 0 !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .kndsb-sport-card,
+.editor-styles-wrapper .kndsb-sport-card__media {
+  box-sizing: border-box;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .kndsb-sport-card__title {
+  hyphens: none !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  writing-mode: horizontal-tb !important;
+}
+
+/*
+ * Gutenberg canvas
+ * ----------------
+ * The public site deliberately breaks .alignfull out to the viewport with
+ * calc(50% - 50vw). In the editor, 100vw is the browser viewport rather than
+ * the writing canvas. Applying that formula here pushes blocks off-canvas.
+ * Keep every full-width section inside the editor canvas instead.
+ */
+.editor-styles-wrapper {
+  box-sizing: border-box;
+  overflow-x: clip !important;
+}
+
+.editor-styles-wrapper .is-root-container {
+  box-sizing: border-box;
+  max-width: none !important;
+  overflow: visible !important;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .is-root-container > .wp-block {
+  box-sizing: border-box;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 760px !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper :is(
+  .alignfull,
+  .is-full-width,
+  [data-align="full"],
+  .is-root-container > .wp-block[data-align="full"]
+) {
+  box-sizing: border-box !important;
+  left: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+  position: relative;
+  right: auto !important;
+  transform: none !important;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .is-root-container > :is(
+  .wp-block-kndsb-layout-section,
+  .wp-block-kndsb-team-overview,
+  .wp-block-kndsb-sport-hero,
+  .wp-block-cover,
+  [data-align="full"]
+) {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Preserve the Client-First hierarchy visually in the editor. */
+.editor-styles-wrapper .kndsb-layout-section,
+.editor-styles-wrapper .kndsb-layout-section > .padding-global,
+.editor-styles-wrapper .kndsb-layout-section > .padding-global > :is(
+  .container-small,
+  .container-medium,
+  .container-large,
+  .container-wide
+),
+.editor-styles-wrapper .kndsb-layout-section > .padding-global > :is(
+  .container-small,
+  .container-medium,
+  .container-large,
+  .container-wide
+) > [class*="padding-section-"] {
+  box-sizing: border-box;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .kndsb-layout-section > .padding-global {
+  padding-left: var(--kndsb-page-gutter) !important;
+  padding-right: var(--kndsb-page-gutter) !important;
+}
+
+.editor-styles-wrapper :is(
+  .container-small,
+  .container-medium,
+  .container-large,
+  .container-wide
+) {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Gutenberg inserts these wrappers around InnerBlocks. They must not create
+ * a second, narrower canvas or inherit a frontend breakout. */
+.editor-styles-wrapper .kndsb-layout-section :is(
+  .block-editor-inner-blocks,
+  .block-editor-block-list__layout
+) {
+  box-sizing: border-box;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+/* Full-width KNDSB components that may also be inserted without the section
+ * shell. Keep them usable until an editor wraps them in a CF section. */
+.editor-styles-wrapper :is(
+  .wp-block-kndsb-team-overview,
+  .kndsb-team-overview-section,
+  .wp-block-kndsb-sport-section,
+  .kndsb-sport-section,
+  .section_sport-sponsors,
+  .section_sport-partners,
+  .kndsb-sport-page__hero,
+  .wp-block-cover
+) {
+  box-sizing: border-box;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  transform: none !important;
+  width: 100% !important;
+}
+
+.editor-styles-wrapper :is(
+  .kndsb-team-overview__grid,
+  .kndsb-sport-page__main-sponsor-logos,
+  .kndsb-sport-page__partner-grid,
+  .wp-block-cover__inner-container
+) {
+  box-sizing: border-box;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+/* Partner logos in the red sponsor bar determine the bar height themselves. */
+.editor-styles-wrapper :is(
+  .section_sport-partners,
+  .kndsb-sport-page__partners,
+  .kndsb-sport-page__partner-grid,
+  .kndsb-sport-page__partner,
+  .kndsb-sport-page__partner .components-resizable-box__container
+) {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.editor-styles-wrapper .kndsb-sport-page__partner img {
+  height: auto;
+  max-height: none !important;
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
+}

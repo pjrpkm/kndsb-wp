@@ -1,0 +1,18 @@
+.kndsb-hero {
+  background: linear-gradient(120deg, var(--kndsb-color-primary-dark), var(--kndsb-color-primary));
+  color: #fff;
+  padding: var(--kndsb-section-large) var(--kndsb-page-gutter);
+}
+
+.kndsb-hero__title {
+  color: inherit;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 1.03;
+  margin: 0;
+  max-width: 14ch;
+}
+
+.kndsb-hero__lead {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  max-width: 55ch;
+}

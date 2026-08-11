@@ -1,0 +1,101 @@
+/*
+ * Compatibility mappings for markup owned by Newspaper, TagDiv and WPBakery.
+ * New KNDSB markup must use the BEM classes in styles/components/.
+ */
+.kndsb-site :where(.td-module-thumb, .td-post-featured-image) img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.kndsb-site .td-post-featured-image img {
+  background-color: #000;
+  object-fit: contain;
+}
+
+.kndsb-site .td-retina-data.td-logo {
+  max-width: 250px;
+}
+
+.kndsb-site .td_block_text_with_title {
+  padding-bottom: 1rem;
+}
+
+.kndsb-site .td_block_text_with_title .block-title {
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.kndsb-site .td_block_text_with_title .block-title:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.kndsb-site :where(.td-page-content, .td-post-content, .wpb_text_column, .td_block_text_with_title, .woocommerce #tab-description) p {
+  margin-bottom: 1rem;
+}
+
+.kndsb-site .has-fixed-layout {
+  margin-top: .5rem;
+}
+
+/* Existing tables inherit the KNDSB presentation until they receive .kndsb-table. */
+.kndsb-site :where(.wp-block-table, .td-post-content, .td-page-content) table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.kndsb-site :where(.wp-block-table, .td-post-content, .td-page-content) :where(table, th, td) {
+  border: 0;
+  box-shadow: none;
+}
+
+.kndsb-site :where(.wp-block-table, .td-post-content, .td-page-content) thead th {
+  background-color: #fff;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  color: var(--kndsb-color-heading);
+  font-size: .9375rem;
+  font-weight: 600;
+  padding: 1rem;
+  position: relative;
+  text-align: left;
+}
+
+.kndsb-site :where(.wp-block-table, .td-post-content, .td-page-content) thead th::after {
+  background-color: var(--kndsb-color-link);
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.kndsb-site :where(.wp-block-table, .td-post-content, .td-page-content) td {
+  color: #222;
+  font-size: .9375rem;
+  padding: 1.25rem 1rem;
+}
+
+.kndsb-site :where(.wp-block-table, .td-post-content, .td-page-content) tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+}
+
+.kndsb-site .wp-block-table {
+  overflow-x: auto;
+}
+
+@media screen and (min-width: 761px) {
+  .kndsb-site :where(.wp-block-table, .td-post-content, .td-page-content) table {
+    margin: 1.5rem 0 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .kndsb-site :where(.wp-block-table, .td-post-content, .td-page-content) table {
+    margin: 2rem 0 3rem;
+  }
+}

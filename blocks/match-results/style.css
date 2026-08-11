@@ -1,0 +1,58 @@
+.section_team-results.kndsb-layout-section--orange { background: var(--kndsb-color-orange) !important; }
+.section_team-results.kndsb-layout-section--blue { background: var(--kndsb-color-blue) !important; }
+.section_team-results.kndsb-layout-section--red { background: var(--kndsb-color-red) !important; }
+.section_team-results.kndsb-layout-section--blue-white { background: var(--kndsb-color-blue-white) !important; }
+
+.section_team-results .kndsb-team-page__results {
+  background: transparent !important;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  width: 100%;
+}
+
+.kndsb-team-page__results--orange .kndsb-team-page__section-title,
+.kndsb-team-page__results--blue .kndsb-team-page__section-title,
+.kndsb-team-page__results--red .kndsb-team-page__section-title { color: #fff !important; }
+.kndsb-team-page__results--blue-white .kndsb-team-page__section-title { color: var(--kndsb-color-blue) !important; }
+
+.editor-styles-wrapper .wp-block-kndsb-match-results {
+  box-sizing: border-box;
+  max-width: none !important;
+  width: 100% !important;
+}
+.editor-styles-wrapper .wp-block-kndsb-match-results .kndsb-team-page__results > .block-editor-inner-blocks,
+.editor-styles-wrapper .wp-block-kndsb-match-results .kndsb-team-page__results > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  box-sizing: border-box;
+  max-width: none !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+.editor-styles-wrapper .wp-block-kndsb-match-results .kndsb-team-page__results > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: grid !important;
+  gap: 16px !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+.editor-styles-wrapper .wp-block-kndsb-match-results .wp-block-kndsb-match-result {
+  box-sizing: border-box;
+  margin: 0 !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+.editor-styles-wrapper .wp-block-kndsb-match-results .wp-block-kndsb-match-result * {
+  hyphens: none !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  writing-mode: horizontal-tb !important;
+}
+
+@media (max-width: 680px) {
+  .editor-styles-wrapper .wp-block-kndsb-match-results .kndsb-team-page__results > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .editor-styles-wrapper .wp-block-kndsb-match-results .wp-block-kndsb-match-result { flex: 0 0 min(82%, 320px) !important; }
+}

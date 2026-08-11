@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "kndsb/board-intro",
+  "version": "1.6.0",
+  "title": "KNDSB Bestuursintro",
+  "category": "widgets",
+  "icon": "welcome-write-blog",
+  "description": "Bewerkbare introductie van de bestuurspagina.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "eyebrow": { "type": "string", "default": "Organisatie" },
+    "title": { "type": "string", "default": "Bestuur KNDSB" },
+    "intro": { "type": "string", "default": "Het KNDSB-beleid wordt op hoofdlijnen vastgesteld door het bestuur. De bestuursleden bewaken de uitvoering en controleren of het beleid zo effectief en efficiënt mogelijk wordt uitgevoerd. Het bestuur bestaat uit maximaal zeven leden." }
+  },
+  "supports": { "html": false, "anchor": true },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

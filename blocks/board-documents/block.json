@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "kndsb/board-documents",
+  "version": "1.6.0",
+  "title": "KNDSB Bestuursdocumenten",
+  "category": "widgets",
+  "icon": "media-document",
+  "description": "Bewerkbare knoppen naar bestuursdocumenten.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "firstLabel": { "type": "string", "default": "Nevenfuncties" },
+    "firstUrl": { "type": "string", "default": "/organisatie/handreiking-integriteit/" },
+    "secondLabel": { "type": "string", "default": "Rooster van aftreden" },
+    "secondUrl": { "type": "string", "default": "/organisatie/documenten/" }
+  },
+  "supports": { "html": false, "anchor": true },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

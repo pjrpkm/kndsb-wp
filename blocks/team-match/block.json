@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/team-match",
+  "version": "1.0.0",
+  "title": "KNDSB wedstrijd",
+  "category": "design",
+  "parent": ["kndsb/team-match-list"],
+  "icon": "shield",
+  "description": "Eén wedstrijd binnen een programma- of uitslagensectie.",
+  "textdomain": "kndsb",
+  "usesContext": ["kndsb/matchMode"],
+  "attributes": {
+    "competition": { "type": "string", "default": "UEFA Nations League" },
+    "date": { "type": "string", "default": "24 sep 2026" },
+    "time": { "type": "string", "default": "20:45" },
+    "score": { "type": "string", "default": "1 – 1" },
+    "homeTeam": { "type": "string", "default": "Nederland" },
+    "awayTeam": { "type": "string", "default": "Duitsland" },
+    "homeLogoUrl": { "type": "string", "default": "" },
+    "homeLogoId": { "type": "number", "default": 0 },
+    "awayLogoUrl": { "type": "string", "default": "" },
+    "awayLogoId": { "type": "number", "default": 0 },
+    "venue": { "type": "string", "default": "Johan Cruijff ArenA, Amsterdam, Nederland" },
+    "buttonText": { "type": "string", "default": "" },
+    "buttonUrl": { "type": "string", "default": "" }
+  },
+  "supports": { "html": false, "reusable": false },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

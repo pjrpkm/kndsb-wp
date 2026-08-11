@@ -1,0 +1,258 @@
+.kndsb-team-page { color: #20252a; font-family: "basic-sans", sans-serif; margin: 0; --wp--style--block-gap: 0; }
+.kndsb-team-page > * { margin-bottom: 0 !important; margin-top: 0 !important; }
+.kndsb-team-page :where(h1,h2,h3,p,a,li) { font-family: "basic-sans", sans-serif !important; }
+.wp-block-kndsb-match-results,
+.wp-block-kndsb-match-result,
+.wp-block-kndsb-team-program,
+.wp-block-kndsb-team-program-item,
+.wp-block-kndsb-match-results :where(h2,h3,p,span,strong,a,button),
+.wp-block-kndsb-match-result :where(h2,h3,p,span,strong,a,button),
+.wp-block-kndsb-team-program :where(h2,h3,p,span,strong,a,button),
+.wp-block-kndsb-team-program-item :where(h2,h3,p,span,strong,a,button) {
+  font-family: "basic-sans", sans-serif !important;
+}
+.kndsb-team-page__hero { background: #242424; min-height: clamp(340px, 42vw, 560px); }
+.wp-block-cover.kndsb-team-page__hero {
+  align-items: stretch !important;
+  display: flex !important;
+  justify-content: stretch !important;
+  padding: 0 !important;
+}
+.wp-block-cover.kndsb-team-page__hero .wp-block-cover__inner-container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: inherit;
+  padding: var(--kndsb-page-gutter);
+  text-align: center;
+  width: 100%;
+}
+.kndsb-team-page__hero .wp-block-cover__background { background: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.15)); }
+.kndsb-team-page__title { color: #fff !important; font-size: clamp(2.7rem, 6vw, 5.2rem) !important; font-weight: 800 !important; line-height: .95; margin: 0 !important; max-width: 1000px; text-align: center; text-transform: uppercase; width: 100%; }
+.kndsb-team-page__nav { background: #303030; position: relative; }
+.kndsb-team-page__nav-list { display: flex; list-style: none; margin: 0 auto; max-width: var(--kndsb-container-main); overflow-x: auto; padding: 0 var(--kndsb-page-gutter); }
+.kndsb-team-page__nav-list li { margin: 0; white-space: nowrap; }
+.kndsb-team-page__nav-list a { color: #fff; display: block; font-weight: 700; padding: 16px 18px; text-decoration: none; }
+.kndsb-team-page__nav-list a:hover,
+.kndsb-team-page__nav-list a:focus-visible { color: var(--kndsb-color-orange); }
+.kndsb-team-page__nav-list li.is-active { position: relative; }
+.kndsb-team-page__nav-list li.is-active a { color: var(--kndsb-color-orange); }
+.kndsb-team-page__section { width: 100%; }
+.kndsb-team-page__section-title { color: var(--kndsb-color-blue) !important; font-size: clamp(1.8rem, 3vw, 2.4rem) !important; font-weight: 700 !important; margin: 0 0 28px; }
+.kndsb-team-page__match-zone { background: var(--kndsb-color-orange); }
+.section_team-featured { background: var(--kndsb-color-orange) !important; }
+.section_team-featured .kndsb-team-page__match-zone { width: 100%; }
+.kndsb-team-page__match-grid {
+  align-items: stretch !important;
+  column-gap: 0 !important;
+  display: flex !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+  position: relative;
+  row-gap: 0 !important;
+  width: 100%;
+}
+.kndsb-team-page__match-grid > .wp-block-column {
+  align-self: stretch;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  min-width: 0;
+}
+.kndsb-team-page__match-grid > .wp-block-column:first-child { flex-basis: 60% !important; margin-right: -5% !important; position: relative; z-index: 2; }
+.kndsb-team-page__match-grid > .wp-block-column:last-child { flex-basis: 45% !important; margin-left: 0 !important; position: relative; z-index: 1; }
+.kndsb-team-page__match-grid .kndsb-team-featured,
+.kndsb-team-page__match-grid .kndsb-team-page__fixtures { height: 100%; }
+.kndsb-team-page__feature { min-height: 390px; overflow: hidden; }
+.kndsb-team-page__feature-copy { background: linear-gradient(transparent, rgba(0,0,0,.88)); bottom: 0; left: 0; padding: 75px 28px 28px; position: absolute; right: 0; }
+.kndsb-team-page__feature-copy h2 { color: #fff !important; font-size: clamp(1.7rem, 3vw, 2.5rem) !important; margin: 0; }
+.kndsb-team-page__fixtures { background: #fff; box-sizing: border-box; display: flex; flex-direction: column; height: 100%; min-height: 470px; padding: 30px 30px 0 76px; position: relative; }
+.kndsb-team-page__fixtures-list { flex: 1; }
+.kndsb-team-page__fixtures-footer { display: none !important; }
+.kndsb-team-page__fixtures-footer:has(>span:first-child:empty) { display: none; }
+.kndsb-team-page__fixtures-footer:hover,.kndsb-team-page__fixtures-footer:focus-visible { background: var(--kndsb-color-blue); color: #fff !important; }
+.kndsb-team-page__fixtures-chevron { display: none; }
+.kndsb-team-page__news { background: #303030; color: #fff; }
+.section_team-news { background: #303030; }
+.section_team-news .kndsb-team-page__news { background: transparent; width: 100%; }
+.kndsb-team-page__news .kndsb-team-page__section-title { color: #fff !important; }
+.kndsb-team-page__news .kndsb-news-row__header { display: none; }
+.kndsb-team-page__news .kndsb-news-row__items { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+
+
+
+
+
+
+
+
+.kndsb-team-page__results { background: var(--kndsb-color-orange); }
+.kndsb-team-page__results .kndsb-team-page__section-title { color: #fff !important; }
+.kndsb-team-page__results--blue-white .kndsb-team-page__section-title { color: var(--kndsb-color-blue) !important; }
+.kndsb-team-page__result-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kndsb-team-page__result { background: #fff; border: 1px solid rgba(6,60,120,.25); border-bottom: 6px solid var(--kndsb-color-blue); border-radius: var(--kndsb-radius); box-shadow: 0 12px 28px rgba(0,28,61,.16); overflow: hidden; transition: box-shadow .2s ease,transform .2s ease; }
+.kndsb-team-page__result:hover { box-shadow: 0 18px 34px rgba(0,28,61,.24); transform: translateY(-4px); }
+.kndsb-team-page__result img { aspect-ratio: 16/9; object-fit: cover; width: 100%; }
+.kndsb-team-page__result-body { padding: 22px 20px 24px; }
+.kndsb-team-page__result-date { border-bottom: 1px solid #d9e2ea; color: var(--kndsb-color-blue); font-size: 13px; font-weight: 400; letter-spacing: .025em; margin: 0 0 14px !important; padding-bottom: 12px; }
+.kndsb-team-page__result-score { align-items: center; color: var(--kndsb-color-blue); display: flex; font-size: 20px; font-weight: 800; gap: 14px; justify-content: space-between; margin: 12px 0 0 !important; }
+.kndsb-team-page__result-score span:first-child { line-height: 1.15; }
+.kndsb-team-page__result-score span:last-child { align-items: center; background: var(--kndsb-color-orange); border-radius: var(--kndsb-radius); color: #fff; display: inline-flex; flex: 0 0 34px; font-size: 16px; height: 34px; justify-content: center; }
+.kndsb-team-page__content-grid { display: grid; gap: 22px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kndsb-team-page__content-card { border: 1px solid #d7e0e7; border-radius: var(--kndsb-radius); padding: 24px; }
+.kndsb-team-page__slider-track { overflow-x: auto; overscroll-behavior-inline: contain; scroll-behavior: smooth; scroll-snap-type: inline mandatory; scrollbar-width: none; }
+.kndsb-team-page__news .kndsb-news-row__items.kndsb-team-page__slider-track { display: grid; grid-auto-columns: calc((100% - 44px)/3); grid-auto-flow: column; grid-template-columns: none; }
+.kndsb-team-page__result-grid.kndsb-team-page__slider-track { display: flex; flex-wrap: nowrap; }
+.kndsb-team-page__result-grid.kndsb-team-page__slider-track > * { flex: 0 0 calc((100% - 32px)/3); }
+.kndsb-team-page__slider-track::-webkit-scrollbar { display: none; }
+.kndsb-team-page__slider-track > * { scroll-snap-align: start; }
+.kndsb-team-page__slider-controls { display: flex; gap: 10px; justify-content: center; margin-top: 30px; }
+.kndsb-team-page__slider-button { align-items: center; background: transparent; border: 1px solid currentColor; border-radius: var(--kndsb-radius); color: var(--kndsb-color-orange); cursor: pointer; display: inline-flex; height: 44px; justify-content: center; padding: 0; width: 44px; }
+.kndsb-team-page__results .kndsb-team-page__slider-button { background: var(--kndsb-color-blue); border-color: var(--kndsb-color-blue); box-shadow: 0 6px 14px rgba(0,28,61,.18); color: #fff; }
+.kndsb-team-page__results .kndsb-team-page__slider-button:hover,.kndsb-team-page__results .kndsb-team-page__slider-button:focus-visible { background: #fff; color: var(--kndsb-color-blue); transform: translateY(-2px); }
+.kndsb-team-page__slider-button:hover,.kndsb-team-page__slider-button:focus-visible { background: currentColor; }
+.kndsb-team-page__slider-button:hover svg,.kndsb-team-page__slider-button:focus-visible svg { color: #fff; }
+.kndsb-team-page__results .kndsb-team-page__slider-button:hover svg,.kndsb-team-page__results .kndsb-team-page__slider-button:focus-visible svg { color: var(--kndsb-color-blue); }
+.kndsb-team-page__slider-button svg { height: 20px; width: 20px; }
+.editor-styles-wrapper .kndsb-team-page,
+.editor-styles-wrapper .kndsb-team-page > * { box-sizing: border-box; max-width: none !important; width: 100% !important; }
+.editor-styles-wrapper .kndsb-team-page__match-zone { box-sizing: border-box; max-width: none !important; width: 100% !important; }
+.editor-styles-wrapper .kndsb-team-page__match-grid > .block-editor-inner-blocks,
+.editor-styles-wrapper .kndsb-team-page__match-grid > .block-editor-inner-blocks > .block-editor-block-list__layout { box-sizing: border-box; max-width: none !important; width: 100% !important; }
+.editor-styles-wrapper .kndsb-team-page__match-grid > .block-editor-inner-blocks > .block-editor-block-list__layout { align-items: stretch; display: flex; gap: 0; overflow: hidden; }
+.editor-styles-wrapper .kndsb-team-page__match-grid > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block-column:first-child { flex-basis: 60% !important; margin-right: -5%; position: relative; z-index: 2; }
+.editor-styles-wrapper .kndsb-team-page__match-grid > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block-column:last-child { flex-basis: 45% !important; position: relative; z-index: 1; }
+.editor-styles-wrapper .kndsb-team-page__result-grid > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.editor-styles-wrapper .kndsb-team-page__content-grid > .block-editor-inner-blocks > .block-editor-block-list__layout { display: grid; gap: 22px; grid-template-columns: repeat(3, minmax(0,1fr)); }
+.editor-styles-wrapper .kndsb-team-page__news .kndsb-news-row__items { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+.editor-styles-wrapper .kndsb-team-page__slider-controls { display: none; }
+@media (max-width: 760px) {
+  .kndsb-team-page__match-grid { display: block !important; }
+  .kndsb-team-page__news .kndsb-news-row__items,
+  .kndsb-team-page__result-grid,
+  .kndsb-team-page__content-grid { grid-template-columns: 1fr; }
+  .kndsb-team-page__news .kndsb-news-row__items,
+  .kndsb-team-page__result-grid { display: grid; grid-auto-columns: 86%; grid-auto-flow: column; grid-template-columns: none; overflow-x: auto; }
+  .kndsb-team-page__result-grid.kndsb-team-page__slider-track { display: flex; }
+  .kndsb-team-page__result-grid.kndsb-team-page__slider-track > * { flex-basis: 86%; }
+}
+@media (max-width: 900px) {
+  .kndsb-team-page__match-grid { display: block !important; overflow: visible; }
+  .kndsb-team-page__match-grid > .wp-block-column:first-child,
+  .kndsb-team-page__match-grid > .wp-block-column:last-child { margin: 0; width: 100%; }
+  .kndsb-team-page__fixtures { min-height: auto; padding: 26px 22px 0; }
+  .kndsb-team-page__fixtures-footer { margin-right: -22px; }
+  .editor-styles-wrapper .kndsb-team-page__match-grid > .block-editor-inner-blocks > .block-editor-block-list__layout { display: block; overflow: visible; }
+  .editor-styles-wrapper .kndsb-team-page__match-grid > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block-column:first-child { margin-right: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .kndsb-team-page__result,.kndsb-team-page__slider-button { transition: none; } .kndsb-team-page__result:hover,.kndsb-team-page__slider-button:hover { transform: none; } }
+
+
+
+
+/* 1.10.4 — stable featured/program join: overlap, never edge-to-edge. */
+.kndsb-team-page__match-zone {
+  background: var(--kndsb-color-orange) !important;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .kndsb-team-page__featured-grid,
+  .kndsb-team-page__featured-inner {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: minmax(0, 58fr) minmax(0, 42fr);
+    overflow: hidden;
+  }
+
+  .kndsb-team-featured,
+  .kndsb-team-page__featured {
+    min-width: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .kndsb-team-program,
+  .kndsb-team-page__program {
+    align-self: stretch;
+    margin-left: -18px !important;
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* Team-name length must not move the flag/time geometry. */
+.kndsb-team-program .kndsb-team-page__team,
+.kndsb-team-page__program .kndsb-team-page__team {
+  min-width: 0;
+  text-align: center;
+}
+
+.kndsb-team-program .kndsb-team-page__team-name,
+.kndsb-team-page__program .kndsb-team-page__team-name {
+  line-height: 1.15;
+  min-height: 2.3em;
+  overflow-wrap: normal;
+  text-align: center;
+  word-break: normal;
+}
+
+
+/* 1.10.4a — simple white backing plane.
+ * Keep the existing 1.10.4 overlap/geometry intact.
+ * White exists only inside the combined featured/program block.
+ */
+.kndsb-team-page__match-zone {
+  background: var(--kndsb-color-orange) !important;
+}
+
+.kndsb-team-page__match-grid {
+  background: #fff !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.kndsb-team-page__match-grid > .wp-block-column:first-child,
+.kndsb-team-featured {
+  position: relative;
+  z-index: 2;
+}
+
+.kndsb-team-page__match-grid > .wp-block-column:last-child,
+.kndsb-team-page__program,
+.kndsb-team-page__fixtures {
+  position: relative;
+  z-index: 1;
+}
+
+.kndsb-team-page__fixtures {
+  background: transparent !important;
+}
+
+
+/* 1.10.4d — only proportion/program width corrections.
+ * Keep the proven 1.10.4a white backdrop and overlap untouched.
+ */
+@media (min-width: 900px) {
+  .kndsb-team-page__match-grid > .wp-block-column:first-child {
+    flex-basis: 55% !important;
+    width: 55% !important;
+  }
+
+  .kndsb-team-page__match-grid > .wp-block-column:last-child {
+    flex-basis: 45% !important;
+    width: 45% !important;
+  }
+
+  .kndsb-team-page__program-item,
+  .kndsb-team-page__match-item,
+  .kndsb-team-page__fixture,
+  .kndsb-team-page__fixtures > * {
+    width: 420px;
+    max-width: 100%;
+  }
+}

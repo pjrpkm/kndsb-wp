@@ -1,0 +1,11 @@
+.kndsb-page { color: var(--kndsb-color-ink); width: 100%; }
+.kndsb-page__article,
+.kndsb-page__content { width: 100%; }
+
+.kndsb-page__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.08;
+  margin: 0 0 1em;
+}
+
+.kndsb-page__content > * + * { margin-top: 1.35rem; }

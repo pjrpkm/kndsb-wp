@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/sport-card",
+  "version": "1.0.0",
+  "title": "KNDSB sportkaart",
+  "category": "design",
+  "icon": "admin-site-alt3",
+  "description": "Sporttak met afbeelding, naam en link.",
+  "textdomain": "kndsb",
+  "parent": ["kndsb/sports-overview"],
+  "attributes": {
+    "title": { "type": "string", "default": "Sporttak" },
+    "url": { "type": "string", "default": "" },
+    "imageId": { "type": "number" },
+    "imageUrl": { "type": "string", "default": "" },
+    "imageAlt": { "type": "string", "default": "" }
+  },
+  "supports": { "html": false, "reusable": false },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

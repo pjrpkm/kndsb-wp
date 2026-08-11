@@ -1,0 +1,54 @@
+.kndsb-team-overview-section {
+  box-sizing: border-box;
+  color: var(--kndsb-color-white);
+  width: 100%;
+}
+
+.kndsb-team-overview-section--orange { background: var(--kndsb-color-orange); }
+.kndsb-team-overview-section--blue { background: var(--kndsb-color-blue); }
+.kndsb-team-overview-section--red { background: var(--kndsb-color-red); }
+.kndsb-team-overview-section--blue-white { background: var(--kndsb-color-blue-white); }
+
+.kndsb-team-overview { width: 100%; }
+
+.kndsb-team-overview__title {
+  color: var(--kndsb-color-white) !important;
+  font-family: "basic-sans", sans-serif !important;
+  font-size: clamp(1.75rem, 2.5vw, 2.15rem) !important;
+  font-weight: 700 !important;
+  margin: 0 0 28px;
+}
+
+.kndsb-team-overview__grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+}
+
+.kndsb-team-overview-section--blue-white { color: var(--kndsb-color-blue); }
+.kndsb-team-overview-section--blue-white .kndsb-team-overview__title,
+.kndsb-team-overview-section--blue-white .kndsb-team-card__title { color: var(--kndsb-color-blue) !important; }
+
+/* Frontend bridge for the old saved component inside the new section shell. */
+.kndsb-team-overview-section > .padding-global .kndsb-team-overview--blue,
+.kndsb-team-overview-section > .padding-global .kndsb-team-overview--red,
+.kndsb-team-overview-section > .padding-global .kndsb-team-overview--blue-white,
+.kndsb-team-overview-section > .padding-global > .container-large > .padding-section-medium > .kndsb-team-overview {
+  background: transparent;
+}
+
+.editor-styles-wrapper .wp-block-kndsb-team-overview { max-width: none !important; width: 100% !important; }
+.editor-styles-wrapper .kndsb-team-overview__title { display: block; max-width: none !important; width: 100% !important; }
+.editor-styles-wrapper .kndsb-team-overview__grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+}
+.editor-styles-wrapper .kndsb-team-overview__grid .wp-block-kndsb-team-card { margin: 0; max-width: none !important; min-width: 0; width: 100% !important; }
+
+@media (max-width: 760px) {
+  .kndsb-team-overview__grid { grid-template-columns: 1fr; }
+  .editor-styles-wrapper .kndsb-team-overview__grid > .block-editor-inner-blocks > .block-editor-block-list__layout { grid-template-columns: 1fr; }
+}

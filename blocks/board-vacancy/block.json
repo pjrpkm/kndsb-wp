@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "kndsb/board-vacancy",
+  "version": "1.6.0",
+  "title": "KNDSB Bestuursvacature",
+  "category": "widgets",
+  "icon": "plus-alt2",
+  "parent": [ "kndsb/board-members" ],
+  "description": "Optionele vacaturekaart in het bestuursraster.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "title": { "type": "string", "default": "Vacature bestuur" },
+    "role": { "type": "string", "default": "Bestuurslid" },
+    "description": { "type": "string", "default": "Wil jij bijdragen aan de toekomst van de Nederlandse dovensport?" },
+    "linkLabel": { "type": "string", "default": "Bekijk vacature" },
+    "linkUrl": { "type": "string", "default": "/vacatures/" },
+    "imageUrl": { "type": "string", "default": "" },
+    "imageId": { "type": "number", "default": 0 }
+  },
+  "supports": { "html": false, "reusable": false },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

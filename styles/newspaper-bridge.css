@@ -1,0 +1,36 @@
+/*
+ * Compatibility layer for pages that still render Newspaper/WPBakery markup.
+ * It maps the existing td-container onto the KNDSB Client-First site grid.
+ * Clean Gutenberg templates never receive the body class used below.
+ */
+.kndsb-newspaper-legacy .td-main-content-wrap {
+  box-sizing: border-box;
+  padding-bottom: var(--kndsb-section-medium);
+  padding-top: var(--kndsb-section-medium);
+  width: 100%;
+}
+
+.kndsb-newspaper-legacy .td-main-content-wrap > .td-container {
+  box-sizing: border-box;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: calc(var(--kndsb-container-main) + var(--kndsb-page-gutter) + var(--kndsb-page-gutter)) !important;
+  padding-left: var(--kndsb-page-gutter) !important;
+  padding-right: var(--kndsb-page-gutter) !important;
+  width: 100% !important;
+}
+
+.kndsb-newspaper-legacy .td-main-content-wrap > .td-container > :first-child {
+  margin-top: 0;
+}
+
+.kndsb-newspaper-legacy .td-main-content-wrap > .td-container > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .kndsb-newspaper-legacy .td-main-content-wrap {
+    padding-bottom: var(--kndsb-section-small);
+    padding-top: var(--kndsb-section-small);
+  }
+}

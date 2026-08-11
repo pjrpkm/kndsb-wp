@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/sports-overview",
+  "version": "1.0.0",
+  "title": "KNDSB sportenoverzicht",
+  "category": "design",
+  "icon": "grid-view",
+  "description": "Doorzoekbaar overzicht van KNDSB-sporttakken.",
+  "textdomain": "kndsb",
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style.css"
+}

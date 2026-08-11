@@ -1,0 +1,25 @@
+.wp-block-kndsb-team-program.kndsb-team-page__fixtures > h2 {
+  color: var(--kndsb-color-blue);
+  font-family: "basic-sans", sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0 0 28px;
+  position: static;
+  text-transform: uppercase;
+}
+.kndsb-team-page__fixtures-list{display:grid}.editor-styles-wrapper .wp-block-kndsb-team-program{box-sizing:border-box;max-width:none!important;width:100%!important}.editor-styles-wrapper .wp-block-kndsb-team-program>.block-editor-inner-blocks>.block-editor-block-list__layout{display:grid}.editor-styles-wrapper .wp-block-kndsb-team-program>h2{clip:auto;clip-path:none;height:auto;overflow:visible;width:auto;white-space:normal}.editor-styles-wrapper .wp-block-kndsb-team-program .kndsb-team-page__fixtures-footer{cursor:text}
+
+
+body:not(.wp-admin) .wp-block-kndsb-team-program {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: var(--kndsb-container-large, 1068px);
+  width: calc(100% - 40px);
+}
+
+@media (max-width: 600px) {
+  body:not(.wp-admin) .wp-block-kndsb-team-program {
+    width: calc(100% - 32px);
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/team-nav",
+  "version": "1.1.0",
+  "title": "KNDSB teamnavigatie",
+  "category": "design",
+  "icon": "menu",
+  "description": "Herbruikbaar submenu voor een KNDSB-teamsite.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "baseUrl": {
+      "type": "string",
+      "default": "/sporttakken/futsal/o18/"
+    },
+    "activeItem": {
+      "type": "string",
+      "default": "overview"
+    },
+    "showOverview": {
+      "type": "boolean",
+      "default": true
+    },
+    "showProgram": {
+      "type": "boolean",
+      "default": true
+    },
+    "showResults": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSquad": {
+      "type": "boolean",
+      "default": true
+    },
+    "showInfo": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "anchor": true,
+    "html": false,
+    "multiple": false
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js"
+}

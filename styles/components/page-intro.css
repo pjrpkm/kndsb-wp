@@ -1,0 +1,28 @@
+/* Reusable page intro. Mirrors the established Bestuur KNDSB intro. */
+.kndsb-page-intro {
+  max-width: 50rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+.kndsb-page-intro__eyebrow {
+  color: var(--kndsb-color-orange);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.2 !important;
+  margin: 0 0 .5rem;
+  text-transform: uppercase;
+}
+.kndsb-page-intro__title {
+  color: var(--kndsb-color-blue, #253780);
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  line-height: 1;
+  margin: 0;
+}
+.kndsb-page-intro__text {
+  color: #4e6071;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.7 !important;
+  margin: 1.5rem 0 0;
+  max-width: 46rem;
+}
+.kndsb-page-intro__text a { color: var(--kndsb-color-orange); }

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/team-match-list",
+  "version": "1.0.0",
+  "title": "KNDSB wedstrijden",
+  "category": "design",
+  "icon": "tickets-alt",
+  "description": "Volledige programma- of uitslagensectie voor een KNDSB-team.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "title": { "type": "string", "default": "Programma" },
+    "month": { "type": "string", "default": "September 2026" },
+    "mode": { "type": "string", "default": "program" }
+  },
+  "providesContext": { "kndsb/matchMode": "mode" },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

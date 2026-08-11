@@ -1,0 +1,86 @@
+/* Global compact team-program item component. */
+.kndsb-team-page__fixture {
+  align-items: center;
+  border-bottom: 1px solid #d9dfe3;
+  color: #20252a;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) 82px minmax(0, 1fr);
+  min-height: 118px;
+  padding: 14px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.kndsb-team-page__fixture > * {
+  margin: 0 !important;
+}
+
+.kndsb-team-page__fixture-meta {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: center;
+}
+
+.kndsb-team-page__fixture-date {
+  color: var(--kndsb-color-orange);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .045em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.kndsb-team-page__fixture-time {
+  color: #000;
+  display: block;
+  font-family: "basic-sans", sans-serif;
+  font-size: clamp(1.5rem, 2.2vw, 1.75rem);
+  font-weight: 900;
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+
+.kndsb-team-page__fixture-team {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.kndsb-team-page__fixture-team p {
+  color: var(--kndsb-color-blue);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.18;
+  margin: 0 !important;
+}
+
+.kndsb-team-page__fixture-logo,
+.kndsb-team-page__fixture-logo-button img {
+  height: 48px;
+  object-fit: contain;
+  width: 48px;
+}
+
+.kndsb-team-page__fixture-logo-button {
+  align-items: center;
+  background: var(--kndsb-color-blue-white);
+  border: 1px dashed #b7c4cf;
+  border-radius: var(--kndsb-radius);
+  color: var(--kndsb-color-blue);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 11px;
+  height: 48px;
+  justify-content: center;
+  padding: 0;
+  width: 48px;
+}
+
+.kndsb-team-page__fixture--linked:hover {
+  background: var(--kndsb-color-blue-white);
+}

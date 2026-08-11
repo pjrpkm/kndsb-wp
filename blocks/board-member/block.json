@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "kndsb/board-member",
+  "version": "1.6.0",
+  "title": "KNDSB Bestuurslid",
+  "category": "widgets",
+  "icon": "admin-users",
+  "parent": [ "kndsb/board-members" ],
+  "description": "Eén bestuurslid met foto, naam en functie.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "name": { "type": "string", "default": "Naam bestuurslid" },
+    "role": { "type": "string", "default": "Functie" },
+    "imageUrl": { "type": "string", "default": "" },
+    "imageId": { "type": "number", "default": 0 }
+  },
+  "supports": { "html": false, "reusable": false },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

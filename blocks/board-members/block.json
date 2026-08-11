@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "kndsb/board-members",
+  "version": "1.6.0",
+  "title": "KNDSB Bestuur",
+  "category": "widgets",
+  "icon": "groups",
+  "description": "Bewerkbare bestuursleden met foto, naam en functie.",
+  "textdomain": "kndsb",
+  "attributes": { "title": { "type": "string", "default": "Het bestuur" } },
+  "providesContext": { "kndsb/board": "title" },
+  "allowedBlocks": [ "kndsb/board-member", "kndsb/board-vacancy" ],
+  "supports": { "html": false, "anchor": true },
+  "editorScript": "file:./index.js"
+}

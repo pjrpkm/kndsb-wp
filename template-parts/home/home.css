@@ -1,0 +1,29 @@
+.kndsb-home__content { width: 100%; }
+.kndsb-home__content > * + * { margin-top: 0; }
+
+.kndsb-home .kndsb-news-row {
+  margin-top: 0;
+}
+
+/* Fallback spacing only for old homepage content without layout sections. */
+.kndsb-home__content > :is(.kndsb-featured-grid, .kndsb-news-row) + .kndsb-news-row {
+  margin-top: var(--kndsb-section-small);
+}
+
+/* Homepage controls placement/column count only.
+   Visual News Row styling lives in blocks/news-row/style.css. */
+.kndsb-home .kndsb-news-row__items {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .kndsb-home .kndsb-news-row__items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .kndsb-home .kndsb-news-row__items {
+    grid-template-columns: 1fr;
+  }
+}

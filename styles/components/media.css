@@ -1,0 +1,22 @@
+.kndsb-media {
+  display: block;
+  overflow: hidden;
+}
+
+.kndsb-media__image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.kndsb-media--contain .kndsb-media__image {
+  background-color: #000;
+  object-fit: contain;
+}
+
+.kndsb-brand__logo {
+  height: auto;
+  max-width: 250px;
+}

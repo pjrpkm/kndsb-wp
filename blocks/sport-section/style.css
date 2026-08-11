@@ -1,0 +1,14 @@
+.kndsb-sport-section { box-sizing: border-box; padding: 0; width: 100%; }
+.kndsb-sport-section__inner { width: 100%; }
+.kndsb-sport-section__title { color: var(--kndsb-color-blue) !important; font-family: "basic-sans",sans-serif !important; font-size: clamp(1.75rem,2.5vw,2.15rem) !important; font-weight: 700 !important; margin: 0 0 24px; }
+.kndsb-sport-section--white { background: #fff; }
+.kndsb-sport-section--orange { background: var(--kndsb-color-orange); }
+.kndsb-sport-section--blue { background: var(--kndsb-color-blue); }
+.kndsb-sport-section--red { background: var(--kndsb-color-red); }
+.kndsb-sport-section--blue-white { background: var(--kndsb-color-blue-white); }
+.kndsb-sport-section--blue,
+.kndsb-sport-section--red { color: #fff; }
+.kndsb-sport-section--blue .kndsb-sport-section__title,
+.kndsb-sport-section--red .kndsb-sport-section__title { color: #fff !important; }
+.editor-styles-wrapper .kndsb-sport-section { box-sizing: border-box; max-width: none !important; width: 100% !important; }
+.editor-styles-wrapper .kndsb-sport-section__inner > .block-editor-inner-blocks > .block-editor-block-list__layout { width: 100%; }

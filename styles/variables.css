@@ -1,0 +1,35 @@
+:root {
+  --kndsb-color-blue: #063c78;
+  --kndsb-color-blue-dark: #003f70;
+  --kndsb-color-red: #e63328;
+  --kndsb-color-white: #ffffff;
+  --kndsb-color-orange: #f37020;
+  --kndsb-color-blue-white: #f1f6fa;
+  --kndsb-color-ink: #17202a;
+  --kndsb-color-muted: #536171;
+  --kndsb-color-border: #d7e0e7;
+  --kndsb-color-black: #111820;
+
+  --kndsb-container-main: 66.75rem;
+  --kndsb-container-wide: 90rem;
+  --kndsb-container-small: 47.5rem;
+  --kndsb-page-gutter: clamp(1rem, 3vw, 1.5rem);
+
+  --kndsb-space-1: .5rem;
+  --kndsb-space-2: 1rem;
+  --kndsb-space-3: 1.5rem;
+  --kndsb-space-4: 2rem;
+  --kndsb-space-5: 3rem;
+  --kndsb-space-6: 4.5rem;
+  --kndsb-space-7: 6rem;
+
+  --kndsb-section-small: clamp(2rem, 4vw, 3rem);
+  --kndsb-section-medium: clamp(3rem, 6vw, 5rem);
+  --kndsb-section-large: clamp(4rem, 8vw, 7rem);
+
+  --kndsb-radius-small: .25rem;
+  --kndsb-radius: .375rem;
+  --kndsb-radius-large: .75rem;
+  --kndsb-shadow-small: 0 .5rem 1.5rem rgba(23, 32, 42, .08);
+  --kndsb-shadow-medium: 0 1rem 2.5rem rgba(23, 32, 42, .14);
+}

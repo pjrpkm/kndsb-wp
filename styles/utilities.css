@@ -1,0 +1,22 @@
+.overflow-hidden { overflow: hidden; }
+.position-relative { position: relative; }
+.text-align-center { text-align: center; }
+.text-color-white { color: var(--kndsb-color-white) !important; }
+.text-color-blue { color: var(--kndsb-color-blue) !important; }
+.background-color-white { background-color: var(--kndsb-color-white); }
+.background-color-blue { background-color: var(--kndsb-color-blue); }
+.background-color-orange { background-color: var(--kndsb-color-orange); }
+.background-color-red { background-color: var(--kndsb-color-red); }
+.background-color-blue-white { background-color: var(--kndsb-color-blue-white); }
+.margin-0 { margin: 0 !important; }
+.hide { display: none !important; }
+
+.screen-reader-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

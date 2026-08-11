@@ -1,0 +1,11 @@
+.kndsb-sport-program { box-sizing: border-box; padding: 0; width: 100%; }
+.kndsb-sport-program__inner { width: 100%; }
+.kndsb-sport-program--white { background:#fff; }
+.kndsb-sport-program--orange { background:var(--kndsb-color-orange); }
+.kndsb-sport-program--blue { background:var(--kndsb-color-blue); color:#fff; }
+.kndsb-sport-program--red { background:var(--kndsb-color-red); color:#fff; }
+.kndsb-sport-program--blue-white { background:var(--kndsb-color-blue-white); }
+.kndsb-sport-program__button,
+.kndsb-sport-program__button-label { align-items:center; background:#fff; border:2px solid var(--kndsb-color-orange); border-radius:var(--kndsb-radius); color:var(--kndsb-color-blue); display:inline-flex; font-weight:700; padding:8px 14px; text-decoration:none; }
+.editor-styles-wrapper .kndsb-sport-program { box-sizing:border-box; max-width:none !important; width:100% !important; }
+.editor-styles-wrapper .kndsb-sport-program__inner > .block-editor-inner-blocks > .block-editor-block-list__layout { width:100%; }

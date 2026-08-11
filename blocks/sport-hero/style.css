@@ -1,0 +1,4 @@
+.kndsb-sport-hero { background-color: var(--kndsb-color-blue); background-position: center; background-repeat: no-repeat; background-size: cover; box-sizing: border-box; }
+.kndsb-sport-hero__inner { box-sizing: border-box; margin: 0 auto; max-width: 1108px; padding: 20px; width: 100%; }
+.editor-styles-wrapper .kndsb-sport-hero { max-width: none !important; width: 100% !important; }
+.editor-styles-wrapper .kndsb-sport-hero__inner { align-items: flex-start; display: flex; flex-direction: column; gap: 22px; justify-content: center; min-height: 360px; }

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/team-hero",
+  "version": "1.0.0",
+  "title": "KNDSB teamhero",
+  "category": "design",
+  "icon": "cover-image",
+  "description": "Grote teamtitel met een bewerkbare teamfoto en overlay.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Oranje Doven Futsal O18"
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": 0
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayOpacity": {
+      "type": "number",
+      "default": 45
+    },
+    "height": {
+      "type": "number",
+      "default": 520
+    },
+    "contentPosition": {
+      "type": "string",
+      "default": "center"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "anchor": true,
+    "html": false,
+    "multiple": false
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css",
+  "render": "file:./render.php"
+}

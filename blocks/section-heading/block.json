@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/section-heading",
+  "version": "1.0.0",
+  "title": "KNDSB sectiekop",
+  "category": "design",
+  "icon": "heading",
+  "description": "Sectietitel met optionele link.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "title": { "type": "string", "default": "Sectietitel" },
+    "linkText": { "type": "string", "default": "" },
+    "linkUrl": { "type": "string", "default": "" }
+  },
+  "supports": { "anchor": true, "align": ["wide", "full"], "html": false },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

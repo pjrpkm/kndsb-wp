@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/layout-section",
+  "version": "1.0.0",
+  "title": "KNDSB sectie",
+  "category": "design",
+  "icon": "align-full-width",
+  "description": "Globale KNDSB-sectie met vaste container-, padding- en kleurkeuzes.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "sectionName": { "type": "string", "default": "content" },
+    "colorScheme": { "type": "string", "default": "white" },
+    "containerSize": { "type": "string", "default": "large" },
+    "paddingSize": { "type": "string", "default": "medium" },
+    "paddingDirection": { "type": "string", "default": "both" }
+  },
+  "supports": {
+    "align": ["full"],
+    "anchor": true,
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

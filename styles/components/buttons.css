@@ -1,0 +1,10 @@
+.kndsb-button--primary .wp-block-button__link {
+  background: var(--kndsb-color-accent);
+  border-radius: var(--kndsb-radius);
+  color: var(--kndsb-color-ink);
+  font-weight: 800;
+}
+
+.kndsb-button--primary .wp-block-button__link:hover {
+  filter: brightness(.94);
+}

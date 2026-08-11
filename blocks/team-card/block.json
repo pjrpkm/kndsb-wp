@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/team-card",
+  "version": "1.0.0",
+  "title": "KNDSB teamkaart",
+  "category": "design",
+  "icon": "id-alt",
+  "description": "Teamkaart met foto, naam en link naar de teamsite.",
+  "textdomain": "kndsb",
+  "parent": ["kndsb/team-overview"],
+  "attributes": {
+    "title": { "type": "string", "default": "Oranje Doven Futsal" },
+    "url": { "type": "string", "default": "" },
+    "imageId": { "type": "number" },
+    "imageUrl": { "type": "string", "default": "" },
+    "imageAlt": { "type": "string", "default": "" }
+  },
+  "supports": { "html": false, "reusable": false },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

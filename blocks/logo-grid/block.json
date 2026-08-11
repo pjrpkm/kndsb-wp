@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/logo-grid",
+  "version": "1.0.0",
+  "title": "KNDSB logogrid",
+  "category": "design",
+  "icon": "grid-view",
+  "description": "Herbruikbaar raster voor sponsoren, fondsen, partners en organisaties.",
+  "textdomain": "kndsb",
+  "supports": { "html": false, "reusable": true },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

@@ -1,0 +1,11 @@
+:root {
+  --kndsb-color-primary: var(--kndsb-color-blue);
+  --kndsb-color-primary-dark: var(--kndsb-color-blue-dark);
+  --kndsb-color-accent: var(--kndsb-color-orange);
+  --kndsb-color-link: var(--kndsb-color-orange);
+  --kndsb-color-heading: var(--kndsb-color-blue);
+  --kndsb-color-surface: var(--kndsb-color-blue-white);
+  --kndsb-content-width: var(--kndsb-container-main);
+  --kndsb-reading-width: var(--kndsb-container-small);
+  --kndsb-shadow: var(--kndsb-shadow-small);
+}

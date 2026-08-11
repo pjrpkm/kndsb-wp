@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "kndsb/page-intro",
+  "version": "1.11.3",
+  "title": "KNDSB Pagina-intro",
+  "category": "widgets",
+  "icon": "welcome-write-blog",
+  "description": "Herbruikbare KNDSB pagina-intro met label, H1 en introductietekst.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Organisatie"
+    },
+    "title": {
+      "type": "string",
+      "default": "Paginatitel"
+    },
+    "intro": {
+      "type": "string",
+      "default": "Voeg hier de introductietekst toe."
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

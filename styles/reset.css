@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  width: 100%;
+  --vw: 1vw;
+  --vh: 1vh;
+  -webkit-text-decoration-skip: ink;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+audio,
+canvas,
+video,
+figure,
+hr,
+pre,
+code,
+kbd,
+samp,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+figure,
+hr,
+pre {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}

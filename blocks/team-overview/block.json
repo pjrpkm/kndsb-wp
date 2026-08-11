@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/team-overview",
+  "version": "1.0.0",
+  "title": "KNDSB teamoverzicht",
+  "category": "design",
+  "icon": "groups",
+  "description": "Overzicht van teams binnen een KNDSB-sporttak.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "title": { "type": "string", "default": "Oranje Doven Futsal" },
+    "colorScheme": { "type": "string", "default": "orange" }
+  },
+  "supports": { "align": ["wide", "full"], "anchor": true, "html": false },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css",
+  "render": "file:./render.php"
+}

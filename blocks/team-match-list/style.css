@@ -1,0 +1,54 @@
+.kndsb-match-list {
+  box-sizing: border-box;
+  font-family: "basic-sans", sans-serif;
+  width: 100%;
+}
+
+.kndsb-match-list__title {
+  font-family: "basic-sans", sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+}
+
+.kndsb-match-list__title {
+  color: var(--kndsb-color-blue) !important;
+  font-size: clamp(1.625rem, 3vw, 2.25rem) !important;
+  line-height: 1.05;
+  margin: 0 0 44px;
+}
+
+
+.kndsb-match-list__items {
+  display: grid;
+  gap: 52px;
+}
+
+.editor-styles-wrapper .kndsb-match-list {
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .kndsb-match-list > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: grid;
+  gap: 52px;
+}
+
+@media (max-width: 760px) {
+  .kndsb-match-list__title {
+    margin-bottom: 48px;
+  }
+}
+
+
+/* 1.10.1 — full team Programma/Uitslagen stay inside the site content container. */
+body:not(.wp-admin) .wp-block-kndsb-team-match-list {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: var(--kndsb-container-large, 1068px);
+  width: calc(100% - 40px);
+}
+
+@media (max-width: 600px) {
+  body:not(.wp-admin) .wp-block-kndsb-team-match-list {
+    width: calc(100% - 32px);
+  }
+}

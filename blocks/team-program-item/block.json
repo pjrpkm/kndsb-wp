@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "kndsb/team-program-item",
+  "version": "1.2.0",
+  "title": "KNDSB programmawedstrijd",
+  "category": "design",
+  "parent": [
+    "kndsb/team-program"
+  ],
+  "icon": "calendar",
+  "description": "Eén compacte programmawedstrijd.",
+  "textdomain": "kndsb",
+  "attributes": {
+    "homeTeam": {
+      "type": "string",
+      "default": "Nederland O18"
+    },
+    "date": {
+      "type": "string",
+      "default": "24 SEP"
+    },
+    "time": {
+      "type": "string",
+      "default": "18:00"
+    },
+    "awayTeam": {
+      "type": "string",
+      "default": "België O18"
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "homeLogoId": {
+      "type": "number",
+      "default": 0
+    },
+    "homeLogoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "homeLogoAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "awayLogoId": {
+      "type": "number",
+      "default": 0
+    },
+    "awayLogoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "awayLogoAlt": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

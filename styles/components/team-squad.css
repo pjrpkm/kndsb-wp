@@ -1,0 +1,63 @@
+/**
+ * KNDSB squad component — reusable BEM component.
+ * Legacy .players-heading/.player-name/.player-role aliases are kept only so
+ * existing Gutenberg content does not visually break during migration.
+ */
+.kndsb-team-squad__hero { min-height: clamp(16.25rem, 40vw, 32.5rem); }
+.kndsb-team-squad__section { width: 100%; }
+
+.kndsb-team-squad__heading,
+.players-heading {
+  align-items: center;
+  color: var(--kndsb-color-blue) !important;
+  display: flex;
+  font-weight: 800 !important;
+  gap: var(--kndsb-space-3);
+  text-transform: uppercase;
+}
+.kndsb-team-squad__heading::after,
+.players-heading::after {
+  background: var(--kndsb-color-border);
+  content: "";
+  flex: 1;
+  height: 1px;
+}
+.kndsb-team-squad__grid {
+  display: grid !important;
+  gap: var(--kndsb-space-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.kndsb-team-squad__card { text-align: center; }
+.kndsb-team-squad__image,
+.kndsb-team-squad__card img {
+  aspect-ratio: 4 / 5;
+  background: var(--kndsb-color-blue-white);
+  border-radius: var(--kndsb-radius);
+  object-fit: cover;
+  width: 100%;
+}
+.kndsb-team-squad__name,
+.kndsb-team-squad__card .player-name {
+  color: var(--kndsb-color-blue) !important;
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  margin: .875rem 0 .125rem;
+  text-transform: uppercase;
+}
+.kndsb-team-squad__role,
+.kndsb-team-squad__card .player-role {
+  color: var(--kndsb-color-orange);
+  font-weight: 500;
+  margin: 0;
+}
+.editor-styles-wrapper .kndsb-team-squad__grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: grid;
+  gap: var(--kndsb-space-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 47.5rem) {
+  .kndsb-team-squad__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 30rem) {
+  .kndsb-team-squad__grid { grid-template-columns: 1fr; }
+}

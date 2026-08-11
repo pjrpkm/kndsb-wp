@@ -1,0 +1,112 @@
+.kndsb-sport-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.kndsb-site .kndsb-sport-card__link {
+  color: #20252a;
+  display: block;
+  text-decoration: none;
+}
+
+.kndsb-sport-card__media {
+  aspect-ratio: 1;
+  background: #eef1f4;
+  overflow: hidden;
+  position: relative;
+}
+
+.kndsb-sport-card__image,
+.kndsb-sport-card__placeholder {
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+  width: 100%;
+}
+
+.kndsb-sport-card__placeholder {
+  align-items: center;
+  background: linear-gradient(145deg, #ff9a26, #f36c21);
+  color: #fff;
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.kndsb-sport-card__label {
+  align-items: center;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  left: 50%;
+  max-width: calc(100% - 28px);
+  min-height: 51px;
+  padding: 10px 14px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
+.kndsb-sport-card__title {
+  color: #253780;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.kndsb-sport-card__arrow {
+  align-items: center;
+  border: 1px solid #ff7f00;
+  border-radius: 50%;
+  color: #ff7f00;
+  display: inline-flex;
+  flex: 0 0 26px;
+  font-size: 16px;
+  height: 26px;
+  justify-content: center;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.kndsb-site .kndsb-sport-card__link:hover .kndsb-sport-card__image,
+.kndsb-site .kndsb-sport-card__link:focus-visible .kndsb-sport-card__image {
+  transform: scale(1.04);
+}
+
+.kndsb-site .kndsb-sport-card__link:hover .kndsb-sport-card__arrow,
+.kndsb-site .kndsb-sport-card__link:focus-visible .kndsb-sport-card__arrow {
+  background: #ff7f00;
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.editor-styles-wrapper .kndsb-sport-card__media-button {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.editor-styles-wrapper .kndsb-sport-card > .kndsb-sport-card__title {
+  background: #fff;
+  color: #253780 !important;
+  margin: -52px auto 0;
+  max-width: calc(100% - 28px);
+  min-height: 52px;
+  padding: 14px;
+  position: relative;
+  text-align: center;
+  width: max-content;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kndsb-sport-card__image,
+  .kndsb-sport-card__arrow { transition: none; }
+}

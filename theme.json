@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "layout": { "contentSize": "760px", "wideSize": "1068px" },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "blue", "name": "KNDSB blauw", "color": "#063c78" },
+        { "slug": "primary-dark", "name": "Donkerblauw", "color": "#003f70" },
+        { "slug": "orange", "name": "KNDSB oranje", "color": "#f37020" },
+        { "slug": "red", "name": "KNDSB rood", "color": "#e63328" },
+        { "slug": "ink", "name": "Tekstkleur", "color": "#17202a" },
+        { "slug": "blue-white", "name": "Gebroken blauw-wit", "color": "#f1f6fa" },
+        { "slug": "white", "name": "Wit", "color": "#ffffff" }
+      ]
+    },
+    "spacing": { "units": ["px", "rem", "%", "vw"] },
+    "typography": { "fluid": true }
+  },
+  "styles": {
+    "typography": { "fontFamily": "basic-sans, Arial, Helvetica, sans-serif", "lineHeight": "1.55" },
+    "elements": { "link": { "color": { "text": "var:preset|color|orange" } } }
+  }
+}

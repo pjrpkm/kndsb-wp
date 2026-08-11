@@ -1,0 +1,411 @@
+.kndsb-sport-page {
+  --kndsb-sport-orange: var(--kndsb-color-orange);
+  --kndsb-sport-blue: var(--kndsb-color-blue);
+  --kndsb-sport-navy: #253b87;
+  --kndsb-sport-pale: var(--kndsb-color-blue-white);
+  --kndsb-sport-radius: 4px;
+  --wp--style--block-gap: 0;
+  color: #20252a;
+  font-family: "basic-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+}
+
+.kndsb-sport-template {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Gutenberg can leave an empty paragraph after the final full-width section.
+ * It still occupies one text line and creates a visible gap before the footer. */
+.kndsb-sport-template p.wp-block-paragraph:empty {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.kndsb-sport-page > * { box-sizing: border-box; }
+
+.kndsb-sport-page > * {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.kndsb-sport-page h1,
+.kndsb-sport-page h2,
+.kndsb-sport-page h3,
+.kndsb-sport-page h4,
+.kndsb-sport-page h5,
+.kndsb-sport-page h6 {
+  font-family: "basic-sans", sans-serif !important;
+}
+
+.kndsb-sport-page p {
+  line-height: 1.6 !important;
+}
+
+.kndsb-sport-page p,
+.kndsb-sport-page li,
+.kndsb-sport-page time,
+.kndsb-sport-page a,
+.kndsb-sport-page button,
+.kndsb-sport-page input {
+  font-family: "basic-sans", sans-serif !important;
+}
+
+.kndsb-sport-page__hero {
+  align-items: center;
+  display: flex;
+  min-height: clamp(360px, 46vw, 600px);
+  padding: 0;
+}
+
+.kndsb-sport-page__hero .wp-block-cover__background {
+  background: linear-gradient(90deg, rgba(0,0,0,.58), rgba(0,0,0,.08) 65%, rgba(0,0,0,0));
+}
+
+.kndsb-sport-page__hero .wp-block-cover__inner-container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--kndsb-container-main);
+  padding-left: var(--kndsb-page-gutter);
+  padding-right: var(--kndsb-page-gutter);
+  width: 100%;
+}
+
+.kndsb-sport-page__title {
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: .95;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.kndsb-sport-page__content {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--kndsb-container-main);
+  padding-left: var(--kndsb-page-gutter);
+  padding-right: var(--kndsb-page-gutter);
+  width: 100%;
+}
+
+.kndsb-sport-page__section {
+  margin-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  margin-top: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.kndsb-sport-page__content > .kndsb-sport-page__section:last-child {
+  margin-bottom: clamp(3.5rem, 6vw, 5rem);
+}
+
+.kndsb-sport-page__content > .kndsb-sport-page__section:first-child {
+  margin-top: 0;
+  padding-top: clamp(2.75rem, 5vw, 4.25rem);
+}
+
+.kndsb-sport-page .kndsb-sport-page__section-title {
+  color: var(--kndsb-sport-blue);
+  font-size: clamp(1.75rem, 2.5vw, 2.15rem) !important;
+  font-weight: 700;
+  line-height: 1.08;
+  margin: 0 0 28px;
+}
+
+.kndsb-sport-page .kndsb-sport-page__section-title--centered,
+.kndsb-sport-page .kndsb-sport-page__sponsor-title,
+.kndsb-sport-page .kndsb-sport-page__main-sponsor > .wp-block-heading {
+  color: var(--kndsb-sport-blue) !important;
+  display: block;
+  font-family: "basic-sans", sans-serif !important;
+  font-size: clamp(1.75rem, 2.5vw, 2.15rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.08;
+  margin-inline: auto;
+  text-align: center !important;
+  width: 100%;
+}
+
+.kndsb-sport-page__section-heading {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.kndsb-sport-page__section-heading .kndsb-sport-page__section-title { margin-bottom: 0; }
+
+.kndsb-sport-page .kndsb-sport-page__about-title {
+  border-bottom: 3px solid var(--kndsb-sport-orange);
+  color: var(--kndsb-sport-blue) !important;
+  display: inline-block;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+}
+
+.kndsb-sport-page__about {
+  max-width: none;
+  width: 100%;
+}
+
+.kndsb-sport-page__about p {
+  color: #323941;
+  line-height: 1.65;
+  max-width: none;
+  width: 100%;
+}
+
+.kndsb-sport-page__information {
+  align-items: stretch !important;
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.kndsb-sport-page__information > .wp-block-column {
+  align-self: stretch;
+  display: flex;
+}
+
+.kndsb-sport-page__information > .wp-block-column:first-child {
+  order: 2;
+}
+
+.kndsb-sport-page__information > .wp-block-column:last-child {
+  order: 1;
+}
+
+.kndsb-sport-page__contact-card,
+.kndsb-sport-page__federation-card {
+  border-radius: var(--kndsb-sport-radius);
+  border: 1px solid var(--kndsb-sport-orange);
+  height: 100%;
+  min-height: 205px;
+  padding: 24px;
+  width: 100%;
+}
+
+.kndsb-sport-page__federation-card {
+  background: var(--kndsb-sport-navy);
+  border-color: var(--kndsb-sport-navy);
+  color: #fff;
+}
+
+.kndsb-sport-page .kndsb-sport-page__federation-card,
+.kndsb-sport-page .kndsb-sport-page__federation-card h3,
+.kndsb-sport-page .kndsb-sport-page__federation-card p,
+.kndsb-sport-page .kndsb-sport-page__federation-card a {
+  color: #fff !important;
+}
+
+.kndsb-sport-page__contact-card h3,
+.kndsb-sport-page__federation-card h3 {
+  color: inherit;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.kndsb-sport-page .kndsb-sport-page__contact-card h3,
+.kndsb-sport-page .kndsb-sport-page__contact-card strong {
+  color: var(--kndsb-sport-blue) !important;
+  font-weight: 700 !important;
+}
+
+.kndsb-sport-page__socials {
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.kndsb-sport-page__program-list { margin: 0; }
+
+.kndsb-sport-page__program-day {
+  border-bottom: 1px solid #cbd8e4;
+  color: var(--kndsb-sport-blue) !important;
+  font-size: 13px;
+  font-weight: 700 !important;
+  font-family: "basic-sans", sans-serif !important;
+  margin: 22px 0 10px;
+  padding-bottom: 8px;
+}
+
+.kndsb-sport-page__program-row {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 48px minmax(0, 2fr) minmax(120px, 1.35fr) 90px 30px;
+  margin: 8px 0 18px !important;
+  min-height: 68px;
+  padding: 9px 12px;
+}
+
+.kndsb-sport-page .kndsb-sport-page__program-row > * {
+  align-self: center;
+  box-sizing: border-box;
+  margin-block-end: 0 !important;
+  margin-block-start: 0 !important;
+}
+
+.kndsb-sport-page__program-row--clickable {
+  border-radius: var(--kndsb-sport-radius);
+  cursor: pointer;
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+
+.kndsb-sport-page__program-row--clickable:hover,
+.kndsb-sport-page__program-row--clickable:focus-visible {
+  box-shadow: inset 0 -3px 0 var(--kndsb-sport-orange), 0 3px 12px rgba(6, 60, 120, .12);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.kndsb-sport-page__program-time {
+  align-items: center;
+  color: var(--kndsb-sport-blue) !important;
+  display: flex;
+  font-family: "basic-sans", sans-serif !important;
+  font-size: 13px;
+  font-weight: 700 !important;
+  justify-content: center;
+}
+
+.kndsb-sport-page__program-card {
+  align-items: center;
+  background: var(--kndsb-sport-pale);
+  border-radius: 18px;
+  display: contents;
+}
+
+.kndsb-sport-page__program-name,
+.kndsb-sport-page__program-location,
+.kndsb-sport-page__program-tag {
+  align-items: center;
+  background: var(--kndsb-sport-pale);
+  display: flex;
+  height: 48px;
+  margin: 0;
+  padding: 12px 14px;
+}
+
+.kndsb-sport-page__program-name {
+  border-radius: var(--kndsb-sport-radius) 0 0 var(--kndsb-sport-radius);
+  color: var(--kndsb-sport-blue);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.kndsb-sport-page__program-location,
+.kndsb-sport-page__program-tag { color: #49657d; font-size: 12px; }
+.kndsb-sport-page__program-tag { border-radius: 0 var(--kndsb-sport-radius) var(--kndsb-sport-radius) 0; }
+.kndsb-sport-page__program-arrow { align-items: center; color: var(--kndsb-sport-blue); display: flex; font-weight: 800; justify-content: center; margin: 0; }
+.kndsb-sport-page__chevron { display: block; height: 16px; width: 16px; }
+
+.kndsb-sport-page__button .wp-block-button__link {
+  align-items: center;
+  background: #fff;
+  border: 2px solid var(--kndsb-sport-orange);
+  border-radius: var(--kndsb-sport-radius);
+  color: var(--kndsb-sport-blue);
+  display: inline-flex;
+  font-family: "basic-sans", sans-serif !important;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 7px;
+  justify-content: center;
+  padding: 7px 13px;
+}
+
+.kndsb-sport-page .kndsb-news-row { margin: 0; max-width: none; }
+.kndsb-sport-page .kndsb-news-row__header { display: none; }
+.kndsb-sport-page .kndsb-news-row__items { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+
+
+
+
+
+
+
+
+
+.kndsb-sport-page__main-sponsor {
+  background: var(--kndsb-color-blue-white);
+  text-align: center;
+}
+
+.section_sport-sponsors { background: var(--kndsb-color-blue-white); }
+.section_sport-partners { background: var(--kndsb-color-red); }
+.section_sport-sponsors .kndsb-sport-page__main-sponsor,
+.section_sport-partners .kndsb-sport-page__partners {
+  background: transparent;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  width: 100%;
+}
+
+.kndsb-sport-page__main-sponsor .kndsb-sport-page__section-title,
+.kndsb-sport-page__main-sponsor .kndsb-sport-page__sponsor-title { margin-bottom: 10px; }
+.kndsb-sport-page .kndsb-sport-page__main-sponsor > .wp-block-heading {
+  color: var(--kndsb-color-blue) !important;
+}
+.kndsb-sport-page .kndsb-sport-page__main-sponsor > p {
+  color: #20252a !important;
+}
+.kndsb-sport-page__main-sponsor > * { margin-left: auto; margin-right: auto; }
+.kndsb-sport-page__main-sponsor > p { text-align: center; }
+.kndsb-sport-page__main-sponsor-logos { gap: 20px; justify-content: center; margin-top: 26px; max-width: 570px !important; }
+.kndsb-sport-page__main-sponsor-logos > .wp-block-column { flex: 0 1 260px; }
+.kndsb-sport-page__main-sponsor-logo { align-items: center; border-radius: var(--kndsb-sport-radius); display: flex; justify-content: center; min-height: 125px; padding: 14px; }
+.kndsb-sport-page__main-sponsor-logo img { max-height: 105px; object-fit: contain; width: auto; }
+
+.kndsb-sport-page__partners {
+  background: var(--kndsb-color-red);
+}
+
+.kndsb-sport-page__partner-grid { align-items: center !important; gap: 42px; overflow: visible; }
+.kndsb-sport-page__partners > .kndsb-sport-page__partner-grid { margin-left: auto; margin-right: auto; }
+.kndsb-sport-page__partner {
+  align-items: center;
+  border-radius: var(--kndsb-sport-radius);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: 70px;
+  overflow: visible;
+  padding: 10px;
+}
+.kndsb-sport-page__partner img {
+  filter: brightness(0) invert(1);
+  height: auto;
+  max-height: none;
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
+}
+
+.editor-styles-wrapper .kndsb-sport-page,
+.editor-styles-wrapper .kndsb-sport-page__hero,
+.editor-styles-wrapper .kndsb-sport-page__section,
+.editor-styles-wrapper .kndsb-sport-page__main-sponsor,
+.editor-styles-wrapper .kndsb-sport-page__partners { box-sizing: border-box; max-width: none !important; width: 100% !important; }
+
+@media (max-width: 800px) {
+  .kndsb-sport-page__program-row { grid-template-columns: 42px 1fr 28px; }
+  .kndsb-sport-page__program-location,
+  .kndsb-sport-page__program-tag { display: none; }
+  .kndsb-sport-page__program-name { border-radius: 18px; }
+  .kndsb-sport-page .kndsb-news-row__items { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .kndsb-sport-page__hero { min-height: 330px; }
+  .kndsb-sport-page__section-heading { align-items: flex-start; flex-direction: column; }
+  .kndsb-sport-page .kndsb-news-row__items { grid-template-columns: 1fr; }
+  .kndsb-sport-page__partner-grid { gap: 20px; }
+}

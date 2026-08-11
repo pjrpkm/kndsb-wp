@@ -10,20 +10,72 @@
 .editor-styles-wrapper {
   color: var(--kndsb-color-ink) !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: clip !important;
+}
+
+.editor-styles-wrapper .is-root-container {
+  box-sizing: border-box;
+  max-width: none !important;
+  overflow: visible !important;
+  width: 100% !important;
 }
 
 .editor-styles-wrapper .is-root-container > .wp-block {
   box-sizing: border-box;
-  max-width: 760px;
-  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 760px !important;
+  min-width: 0 !important;
+  width: 100% !important;
 }
 
 .editor-styles-wrapper .is-root-container > .wp-block[data-align="wide"] {
-  max-width: var(--kndsb-container-main);
+  max-width: var(--kndsb-container-main) !important;
 }
 
-.editor-styles-wrapper .is-root-container > .wp-block[data-align="full"] {
-  max-width: none;
+/*
+ * Gutenberg canvas
+ * ----------------
+ * Frontend .alignfull rules use the browser viewport. In Gutenberg that can
+ * push a newly inserted pattern outside the writing canvas. Treat both the
+ * saved block class and Gutenberg's temporary data-align wrapper as a full
+ * editor-canvas block from the first render onward.
+ */
+.editor-styles-wrapper :is(
+  .alignfull,
+  .is-full-width,
+  [data-align="full"],
+  .is-root-container > .wp-block[data-align="full"]
+) {
+  box-sizing: border-box !important;
+  left: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+  position: relative;
+  right: auto !important;
+  transform: none !important;
+  width: 100% !important;
+}
+
+/* layout-section is itself a full-width section. Gutenberg does not always
+ * expose data-align="full" immediately when a pattern is freshly inserted,
+ * so target the registered block class directly as well. */
+.editor-styles-wrapper .is-root-container > .wp-block-kndsb-layout-section,
+.editor-styles-wrapper .is-root-container > [data-type="kndsb/layout-section"],
+.editor-styles-wrapper .is-root-container > .wp-block[data-type="kndsb/layout-section"],
+.editor-styles-wrapper .is-root-container > :is(
+  .wp-block-kndsb-team-overview,
+  .wp-block-kndsb-sport-hero,
+  .wp-block-cover,
+  [data-align="full"]
+) {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  width: 100% !important;
 }
 
 .editor-styles-wrapper .is-root-container > .wp-block[data-align="full"] > .wp-block-group__inner-container,
@@ -77,63 +129,6 @@
   writing-mode: horizontal-tb !important;
 }
 
-/*
- * Gutenberg canvas
- * ----------------
- * The public site deliberately breaks .alignfull out to the viewport with
- * calc(50% - 50vw). In the editor, 100vw is the browser viewport rather than
- * the writing canvas. Applying that formula here pushes blocks off-canvas.
- * Keep every full-width section inside the editor canvas instead.
- */
-.editor-styles-wrapper {
-  box-sizing: border-box;
-  overflow-x: clip !important;
-}
-
-.editor-styles-wrapper .is-root-container {
-  box-sizing: border-box;
-  max-width: none !important;
-  overflow: visible !important;
-  width: 100% !important;
-}
-
-.editor-styles-wrapper .is-root-container > .wp-block {
-  box-sizing: border-box;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  max-width: 760px !important;
-  min-width: 0 !important;
-  width: 100% !important;
-}
-
-.editor-styles-wrapper :is(
-  .alignfull,
-  .is-full-width,
-  [data-align="full"],
-  .is-root-container > .wp-block[data-align="full"]
-) {
-  box-sizing: border-box !important;
-  left: auto !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  max-width: none !important;
-  position: relative;
-  right: auto !important;
-  transform: none !important;
-  width: 100% !important;
-}
-
-.editor-styles-wrapper .is-root-container > :is(
-  .wp-block-kndsb-layout-section,
-  .wp-block-kndsb-team-overview,
-  .wp-block-kndsb-sport-hero,
-  .wp-block-cover,
-  [data-align="full"]
-) {
-  max-width: none !important;
-  width: 100% !important;
-}
-
 /* Preserve the Client-First hierarchy visually in the editor. */
 .editor-styles-wrapper .kndsb-layout-section,
 .editor-styles-wrapper .kndsb-layout-section > .padding-global,
@@ -170,12 +165,18 @@
 }
 
 /* Gutenberg inserts these wrappers around InnerBlocks. They must not create
- * a second, narrower canvas or inherit a frontend breakout. */
+ * a second, narrower canvas or inherit a frontend breakout. The direct-child
+ * selectors cover both a saved section and a freshly inserted pattern. */
 .editor-styles-wrapper .kndsb-layout-section :is(
   .block-editor-inner-blocks,
   .block-editor-block-list__layout
-) {
+),
+.editor-styles-wrapper [data-type="kndsb/layout-section"] > .block-editor-block-list__block-edit,
+.editor-styles-wrapper [data-type="kndsb/layout-section"] > .block-editor-block-list__block-edit > [data-block],
+.editor-styles-wrapper [data-type="kndsb/layout-section"] .block-editor-inner-blocks,
+.editor-styles-wrapper [data-type="kndsb/layout-section"] .block-editor-block-list__layout {
   box-sizing: border-box;
+  max-width: none !important;
   min-width: 0 !important;
   width: 100% !important;
 }

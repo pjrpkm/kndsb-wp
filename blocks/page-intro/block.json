@@ -27,5 +27,6 @@
     "anchor": true
   },
   "editorScript": "file:./index.js",
+  "style": "file:./style.css",
   "render": "file:./render.php"
 }

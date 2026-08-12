@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "kndsb/layout-section",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "title": "KNDSB sectie",
   "category": "design",
   "icon": "align-full-width",
@@ -13,8 +13,7 @@
     "colorScheme": { "type": "string", "default": "white" },
     "containerSize": { "type": "string", "default": "large" },
     "paddingSize": { "type": "string", "default": "medium" },
-    "paddingDirection": { "type": "string", "default": "both" },
-    "extraBottomSpace": { "type": "string", "default": "none" }
+    "paddingDirection": { "type": "string", "default": "both" }
   },
   "supports": {
     "align": ["full"],

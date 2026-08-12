@@ -27,6 +27,17 @@
 		return className;
 	}
 
+	function sectionContent( attributes, innerContent ) {
+		if ( attributes.containerSize === 'none' ) {
+			return innerContent;
+		}
+		return el( 'div', { className: 'padding-global' },
+			el( 'div', { className: 'container-' + attributes.containerSize },
+				el( 'div', { className: paddingClass( attributes ) }, innerContent )
+			)
+		);
+	}
+
 	blocks.registerBlockType( 'kndsb/layout-section', {
 		edit: function ( props ) {
 			var attributes = props.attributes;
@@ -55,6 +66,7 @@
 							label: i18n.__( 'Container', 'kndsb' ),
 							value: attributes.containerSize,
 							options: [
+								{ label: 'Geen – volledige breedte', value: 'none' },
 								{ label: 'Klein – leestekst', value: 'small' },
 								{ label: 'Middel', value: 'medium' },
 								{ label: 'Groot – standaard', value: 'large' },
@@ -86,24 +98,14 @@
 					)
 				),
 				el( 'section', blockEditor.useBlockProps( { className: sectionClass( attributes ) } ),
-					el( 'div', { className: 'padding-global' },
-						el( 'div', { className: 'container-' + attributes.containerSize },
-							el( 'div', { className: paddingClass( attributes ) },
-								el( InnerBlocks, { templateLock: false } )
-							)
-						)
-					)
+					sectionContent( attributes, el( InnerBlocks, { templateLock: false } ) )
 				)
 			);
 		},
 		save: function ( props ) {
 			var attributes = props.attributes;
 			return el( 'section', blockEditor.useBlockProps.save( { className: sectionClass( attributes ) } ),
-				el( 'div', { className: 'padding-global' },
-					el( 'div', { className: 'container-' + attributes.containerSize },
-						el( 'div', { className: paddingClass( attributes ) }, el( InnerBlocks.Content ) )
-					)
-				)
+				sectionContent( attributes, el( InnerBlocks.Content ) )
 			);
 		},
 		deprecated: [ {

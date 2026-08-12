@@ -7,4 +7,17 @@
 .kndsb-layout-section--blue :where(h1,h2,h3,h4,h5,h6,a),
 .kndsb-layout-section--orange :where(h1,h2,h3,h4,h5,h6,a),
 .kndsb-layout-section--red :where(h1,h2,h3,h4,h5,h6,a) { color: var(--kndsb-color-white); }
+
+/* Edge-to-edge sections keep the reusable layout-section structure, but let
+ * media/background content span the viewport instead of being capped by the
+ * inner Client First container. */
+.kndsb-layout-section--edge-to-edge > .padding-global { padding-left: 0; padding-right: 0; }
+.kndsb-layout-section--edge-to-edge > .padding-global > [class^="container-"],
+.kndsb-layout-section--edge-to-edge > .padding-global > [class*=" container-"] {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+  width: 100%;
+}
+
 .editor-styles-wrapper .wp-block-kndsb-layout-section { max-width: none !important; width: 100% !important; }

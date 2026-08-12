@@ -8,10 +8,4 @@
 .kndsb-layout-section--orange :where(h1,h2,h3,h4,h5,h6,a),
 .kndsb-layout-section--red :where(h1,h2,h3,h4,h5,h6,a) { color: var(--kndsb-color-white); }
 
-/* Optional extra breathing room below a section's normal vertical spacing. */
-.padding-bottom-extra-small { padding-bottom: calc(var(--kndsb-section-small) + var(--kndsb-space-2)) !important; }
-.padding-bottom-extra-medium { padding-bottom: calc(var(--kndsb-section-medium) + var(--kndsb-space-3)) !important; }
-.padding-bottom-extra-large { padding-bottom: calc(var(--kndsb-section-large) + var(--kndsb-space-4)) !important; }
-.padding-bottom-extra-xlarge { padding-bottom: calc(var(--kndsb-section-large) + var(--kndsb-space-7)) !important; }
-
 .editor-styles-wrapper .wp-block-kndsb-layout-section { max-width: none !important; width: 100% !important; }

@@ -24,9 +24,6 @@
 		} else if ( attributes.paddingDirection === 'bottom' ) {
 			className += ' padding-bottom-only';
 		}
-		if ( attributes.extraBottomSpace && attributes.extraBottomSpace !== 'none' ) {
-			className += ' padding-bottom-extra-' + attributes.extraBottomSpace;
-		}
 		return className;
 	}
 
@@ -97,18 +94,6 @@
 								{ label: 'Alleen onder', value: 'bottom' }
 							],
 							onChange: function ( value ) { props.setAttributes( { paddingDirection: value } ); }
-						} ),
-						el( SelectControl, {
-							label: i18n.__( 'Extra ruimte onder', 'kndsb' ),
-							value: attributes.extraBottomSpace || 'none',
-							options: [
-								{ label: 'Geen – standaard', value: 'none' },
-								{ label: 'Klein', value: 'small' },
-								{ label: 'Middel', value: 'medium' },
-								{ label: 'Groot', value: 'large' },
-								{ label: 'Extra groot', value: 'xlarge' }
-							],
-							onChange: function ( value ) { props.setAttributes( { extraBottomSpace: value } ); }
 						} )
 					)
 				),

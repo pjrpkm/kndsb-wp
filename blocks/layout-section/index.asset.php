@@ -1,13 +1,11 @@
 <?php
 /**
- * Dependencies and automatic cache-busting for the layout-section editor script.
+ * Dependencies for the layout-section editor script.
  *
- * The script version follows index.js' modification time, so every deployed
- * editor change receives a fresh URL without relying on a hard refresh.
+ * Keep the asset version stable and in sync with the block release. WordPress
+ * block registration reads this metadata while registering the editor script;
+ * cache invalidation is handled by bumping this value with block changes.
  */
-
-$script_path = __DIR__ . '/index.js';
-
 return array(
 	'dependencies' => array(
 		'wp-blocks',
@@ -16,5 +14,5 @@ return array(
 		'wp-element',
 		'wp-i18n',
 	),
-	'version'      => file_exists( $script_path ) ? (string) filemtime( $script_path ) : '1.0.0',
+	'version' => '1.2.1',
 );

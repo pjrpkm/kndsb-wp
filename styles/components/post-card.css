@@ -7,7 +7,7 @@
   background: #fff;
   border: 1px solid #dbe3ea;
   border-bottom: 6px solid var(--kndsb-section-accent, var(--kndsb-color-orange));
-  border-radius: 0;
+  border-radius: 4px;
   box-shadow: none;
   display: flex;
   flex-direction: column;

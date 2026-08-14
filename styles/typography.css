@@ -15,7 +15,6 @@
 
 .kndsb-article-content .wp-block-table :where(th, td) {
   font-family: "basic-sans", sans-serif;
-  font-size: 15px;
 }
 
 :where(.kndsb-site.single) :where(p, li, td, th),

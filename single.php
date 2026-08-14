@@ -21,20 +21,18 @@ get_header();
 				</header>
 			<?php endif; ?>
 
-			<div class="padding-global kndsb-article__container-wrap<?php echo has_post_thumbnail() ? ' kndsb-article__container-wrap--overlap' : ''; ?>">
-				<div class="container-large">
-					<div class="kndsb-article__container">
-						<header class="kndsb-article__heading">
-							<h1 class="kndsb-article__title"><?php the_title(); ?></h1>
-							<time class="kndsb-article__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time>
-							<?php if ( $caption ) : ?>
-								<p class="kndsb-article__featured-caption"><?php echo wp_kses_post( $caption ); ?></p>
-							<?php endif; ?>
-						</header>
+			<div class="kndsb-article__container-wrap<?php echo has_post_thumbnail() ? ' kndsb-article__container-wrap--overlap' : ''; ?>">
+				<div class="kndsb-article__container">
+					<header class="kndsb-article__heading">
+						<h1 class="kndsb-article__title"><?php the_title(); ?></h1>
+						<time class="kndsb-article__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time>
+						<?php if ( $caption ) : ?>
+							<p class="kndsb-article__featured-caption"><?php echo wp_kses_post( $caption ); ?></p>
+						<?php endif; ?>
+					</header>
 
-						<div class="kndsb-article-content">
-							<?php the_content(); ?>
-						</div>
+					<div class="kndsb-article-content">
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</div>

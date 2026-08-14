@@ -21,7 +21,6 @@
 .wp-block-table thead th {
   background-color: #fff;
   color: var(--kndsb-color-blue);
-  font-size: .9375rem;
   font-weight: 600;
   padding: 1rem;
   position: relative;
@@ -42,7 +41,6 @@
 .kndsb-table__cell,
 .wp-block-table td {
   color: #222;
-  font-size: .9375rem;
   padding: 1.25rem 1rem;
 }
 

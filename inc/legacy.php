@@ -8,15 +8,45 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Determine whether the current page still depends on Newspaper/WPBakery.
- * Clean KNDSB templates must never inherit the parent theme's layout CSS.
+ * Newspaper pagebuilder templates may still be stored in _wp_page_template on
+ * existing pages. Treat those assignments as obsolete: KNDSB owns the page
+ * shell and Gutenberg owns the content.
+ */
+function kndsb_use_default_page_template( $template ) {
+	if ( ! is_page() ) {
+		return $template;
+	}
+
+	$post = get_queried_object();
+	if ( ! $post instanceof WP_Post ) {
+		return $template;
+	}
+
+	$page_template = (string) get_page_template_slug( $post );
+	$is_newspaper_pagebuilder = false !== strpos( $page_template, 'pagebuilder' )
+		|| false !== strpos( $page_template, 'tagdiv' )
+		|| false !== strpos( $page_template, 'td-' );
+
+	if ( ! $is_newspaper_pagebuilder ) {
+		return $template;
+	}
+
+	$child_page_template = KNDSB_CHILD_PATH . 'page.php';
+	return file_exists( $child_page_template ) ? $child_page_template : $template;
+}
+add_filter( 'template_include', 'kndsb_use_default_page_template', 999 );
+
+/**
+ * Determine whether the current page still contains Newspaper/WPBakery
+ * content that needs migration. A legacy template assignment alone no longer
+ * makes the frontend legacy because it is routed through page.php above.
  */
 function kndsb_is_legacy_newspaper_page() {
 	if ( is_home() || is_archive() || is_search() || is_404() ) {
 		return true;
 	}
 
-	if ( ! is_page() || is_page( array( 'nieuws', 'bestuur-kndsb' ) ) ) {
+	if ( ! is_page() ) {
 		return false;
 	}
 
@@ -36,13 +66,7 @@ function kndsb_is_legacy_newspaper_page() {
 		return false;
 	}
 
-	$page_template = (string) get_page_template_slug( $post );
-	$legacy_template = false !== strpos( $page_template, 'pagebuilder' )
-		|| false !== strpos( $page_template, 'tagdiv' )
-		|| false !== strpos( $page_template, 'td-' );
-	$legacy_content = false !== strpos( $content, '[vc_' ) || false !== strpos( $content, '[td_' );
-
-	return $legacy_template || $legacy_content;
+	return false !== strpos( $content, '[vc_' ) || false !== strpos( $content, '[td_' );
 }
 
 /**

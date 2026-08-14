@@ -17,12 +17,8 @@
   text-transform: uppercase;
 }
 
-.kndsb-board-page__title,
-.kndsb-board-page__section-title {
-  color: var(--kndsb-color-blue, #253780);
-}
-
 .kndsb-board-page__title {
+  color: var(--kndsb-color-blue, #253780);
   font-size: clamp(2.25rem, 5vw, 4.25rem);
   line-height: 1;
   margin: 0;
@@ -45,10 +41,15 @@
   background: var(--kndsb-color-blue-white, #f1f6fa);
 }
 
-.kndsb-board-page__section-title {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  line-height: 1.1;
+.kndsb-page__section-title {
+  color: var(--kndsb-color-blue, #253780);
+  font-size: clamp(1.6rem, 2.2vw, 1.95rem);
+  font-weight: 700;
+  line-height: 1.08;
   margin: 0 0 32px;
+  padding: 0;
+  text-align: left;
+  text-transform: none;
 }
 
 .kndsb-board-page__grid,

@@ -1,6 +1,7 @@
 /* Reusable page intro. Mirrors the established Bestuur KNDSB intro. */
 .kndsb-page-intro {
   max-width: 50rem;
+  padding-top: var(--kndsb-section-medium);
 }
 .kndsb-page-intro__eyebrow {
   color: var(--kndsb-color-orange);

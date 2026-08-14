@@ -28,6 +28,23 @@
   margin-bottom: 0;
 }
 
+/*
+ * Newspaper applies its own borders to generic tables. Gutenberg tables are
+ * owned by the KNDSB table component, so neutralize those legacy borders here.
+ */
+.wp-block-table table,
+.wp-block-table thead,
+.wp-block-table tbody,
+.wp-block-table tfoot,
+.wp-block-table tr,
+.wp-block-table th,
+.wp-block-table td {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+  box-shadow: none !important;
+}
+
 @media (max-width: 767px) {
   .kndsb-newspaper-legacy .td-main-content-wrap {
     padding-bottom: var(--kndsb-section-small);

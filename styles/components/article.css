@@ -22,11 +22,9 @@
 
 .kndsb-article__container-wrap {
   background: var(--kndsb-color-blue-white);
-  padding: clamp(3rem, 6vw, 5rem) var(--kndsb-page-gutter) clamp(3rem, 7vw, 5.5rem);
+  padding: 0 var(--kndsb-page-gutter) clamp(3rem, 7vw, 5.5rem);
   position: relative;
-  z-index: 2;
 }
-.kndsb-article__container-wrap--overlap { padding-top: 0; }
 .kndsb-article__container {
   background: var(--kndsb-color-white);
   box-sizing: border-box;
@@ -35,8 +33,11 @@
   padding: 80px 100px;
   position: relative;
   width: 100%;
+  z-index: 2;
 }
-.kndsb-article__container-wrap--overlap .kndsb-article__container { margin-top: -140px; }
+.kndsb-article__container-wrap--overlap .kndsb-article__container {
+  margin-top: -140px;
+}
 
 .kndsb-article__heading { border-bottom: 1px solid var(--kndsb-color-border); }
 .kndsb-article__title {

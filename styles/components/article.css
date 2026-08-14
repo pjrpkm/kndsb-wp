@@ -28,12 +28,15 @@
   z-index: 2;
 }
 .kndsb-article__container-wrap--overlap {
-  margin-top: -8rem;
   padding-top: 0;
 }
 .kndsb-article__container-wrap .container-large {
   max-width: 1280px;
   width: 100%;
+}
+.kndsb-article__container-wrap--overlap .kndsb-article__container {
+  margin-top: -8rem;
+  position: relative;
 }
 .kndsb-article__container {
   background: var(--kndsb-color-white);
@@ -112,7 +115,7 @@
 
 @media (max-width: 42.5rem) {
   .kndsb-article__featured { height: clamp(22rem, 78vw, 30rem); }
-  .kndsb-article__container-wrap--overlap { margin-top: -3.5rem; }
+  .kndsb-article__container-wrap--overlap .kndsb-article__container { margin-top: -3.5rem; }
   .kndsb-article__container { padding: 1.5rem; }
   .kndsb-article__title { font-size: clamp(2rem, 8vw, 2.5rem); }
 }

@@ -17,9 +17,12 @@
 	<div class="wp-block-group alignwide">
 		<!-- wp:kndsb/board-members {"title":"Het bestuur"} -->
 		<div class="wp-block-kndsb-board-members kndsb-board-members">
-			<!-- wp:kndsb/board-member {"name":"Ko ter Linden","role":"Voorzitter","imageUrl":"/wp-content/uploads/koterlinden-1-2-scaled.jpg"} /-->
-			<!-- wp:kndsb/board-member {"name":"Wietse Sijm","role":"Bestuurslid sportzaken","imageUrl":"/wp-content/uploads/1764336903669.jpeg"} /-->
-			<!-- wp:kndsb/board-member {"name":"Johan Hessing","role":"Penningmeester bij volmacht","imageUrl":"/wp-content/uploads/Johan-Hessing-2-e1774818337924.jpg"} /-->
+			<h2 class="kndsb-page__section-title">Het bestuur</h2>
+			<div class="kndsb-board-page__grid">
+				<!-- wp:kndsb/board-member {"name":"Ko ter Linden","role":"Voorzitter","imageUrl":"/wp-content/uploads/koterlinden-1-2-scaled.jpg"} /-->
+				<!-- wp:kndsb/board-member {"name":"Wietse Sijm","role":"Bestuurslid sportzaken","imageUrl":"/wp-content/uploads/1764336903669.jpeg"} /-->
+				<!-- wp:kndsb/board-member {"name":"Johan Hessing","role":"Penningmeester bij volmacht","imageUrl":"/wp-content/uploads/Johan-Hessing-2-e1774818337924.jpg"} /-->
+			</div>
 		</div>
 		<!-- /wp:kndsb/board-members -->
 

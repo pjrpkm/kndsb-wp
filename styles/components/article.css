@@ -21,7 +21,7 @@
 }
 
 .kndsb-article__container-wrap {
-  background: var(--kndsb-color-blue-white);
+  background: transparent;
   display: flow-root;
   padding: 0 var(--kndsb-page-gutter) clamp(3rem, 7vw, 5.5rem);
   position: relative;

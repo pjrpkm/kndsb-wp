@@ -1,9 +1,13 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 2,
+  "version": 3,
   "settings": {
-    "appearanceTools": true,
-    "layout": { "contentSize": "760px", "wideSize": "1068px" },
+    "appearanceTools": false,
+    "useRootPaddingAwareAlignments": true,
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1280px"
+    },
     "color": {
       "defaultPalette": false,
       "palette": [
@@ -16,11 +20,40 @@
         { "slug": "white", "name": "Wit", "color": "#ffffff" }
       ]
     },
-    "spacing": { "units": ["px", "rem", "%", "vw"] },
-    "typography": { "fluid": true }
+    "spacing": {
+      "units": ["px", "rem", "%"],
+      "spacingSizes": [
+        { "slug": "xs", "name": "XS", "size": "8px" },
+        { "slug": "s", "name": "S", "size": "16px" },
+        { "slug": "m", "name": "M", "size": "24px" },
+        { "slug": "l", "name": "L", "size": "32px" },
+        { "slug": "xl", "name": "XL", "size": "48px" },
+        { "slug": "2-xl", "name": "2XL", "size": "64px" },
+        { "slug": "3-xl", "name": "3XL", "size": "80px" },
+        { "slug": "4-xl", "name": "4XL", "size": "96px" }
+      ]
+    },
+    "typography": {
+      "fluid": true
+    }
   },
   "styles": {
-    "typography": { "fontFamily": "basic-sans, Arial, Helvetica, sans-serif", "lineHeight": "1.55" },
-    "elements": { "link": { "color": { "text": "var:preset|color|orange" } } }
+    "spacing": {
+      "padding": {
+        "left": "clamp(16px, 3vw, 24px)",
+        "right": "clamp(16px, 3vw, 24px)"
+      }
+    },
+    "typography": {
+      "fontFamily": "basic-sans, Arial, Helvetica, sans-serif",
+      "lineHeight": "1.55"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var:preset|color|orange"
+        }
+      }
+    }
   }
 }

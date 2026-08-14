@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$parent_id = wp_get_post_parent_id( get_the_ID() );
+$parent_id = (int) get_post_field( 'post_parent', get_the_ID() );
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'kndsb-page__article' ); ?>>
 	<?php if ( ! is_front_page() ) : ?>

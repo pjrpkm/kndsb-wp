@@ -12,7 +12,7 @@
 		edit: function ( props ) {
 			return el( 'div', blockEditor.useBlockProps( { className: 'kndsb-board-members' } ),
 				el( RichText, {
-					tagName: 'h2', className: 'kndsb-board-page__section-title',
+					tagName: 'h2', className: 'kndsb-page__section-title',
 					value: props.attributes.title,
 					onChange: function ( value ) { props.setAttributes( { title: value } ); },
 					placeholder: i18n.__( 'Sectietitel', 'kndsb' )
@@ -24,7 +24,7 @@
 		},
 		save: function ( props ) {
 			return el( 'div', blockEditor.useBlockProps.save( { className: 'kndsb-board-members' } ),
-				el( RichText.Content, { tagName: 'h2', className: 'kndsb-board-page__section-title', value: props.attributes.title } ),
+				el( RichText.Content, { tagName: 'h2', className: 'kndsb-page__section-title', value: props.attributes.title } ),
 				el( 'div', { className: 'kndsb-board-page__grid' }, el( InnerBlocks.Content ) )
 			);
 		}

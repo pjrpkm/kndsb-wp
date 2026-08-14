@@ -20,7 +20,7 @@
 .kndsb-table__heading,
 .wp-block-table.is-style-kndsb-table thead th {
   background-color: #fff;
-  color: var(--kndsb-color-heading);
+  color: var(--kndsb-color-blue);
   font-size: .9375rem;
   font-weight: 600;
   padding: 1rem;
@@ -30,7 +30,7 @@
 
 .kndsb-table__heading::after,
 .wp-block-table.is-style-kndsb-table thead th::after {
-  background-color: var(--kndsb-color-link);
+  background-color: var(--kndsb-color-orange);
   bottom: 0;
   content: "";
   height: 2px;

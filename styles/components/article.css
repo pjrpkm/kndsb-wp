@@ -36,7 +36,9 @@
   width: 100%;
   z-index: 2;
 }
-.kndsb-article__container-wrap--overlap .kndsb-article__container { margin-top: -240px; }
+.kndsb-article__container-wrap--overlap .kndsb-article__container {
+  margin-top: -240px;
+}
 
 .kndsb-article__heading { border-bottom: 1px solid var(--kndsb-color-border); }
 .kndsb-article__title { color: var(--kndsb-color-blue); font-size: 38px; font-weight: 700; letter-spacing: -.025em; line-height: 1.08; margin: 0; padding-bottom: 30px; text-wrap: balance; }

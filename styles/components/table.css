@@ -1,24 +1,24 @@
 .kndsb-table,
-.wp-block-table.is-style-kndsb-table {
+.wp-block-table {
   margin-block: 1rem;
   overflow-x: auto;
 }
 
 .kndsb-table__table,
-.wp-block-table.is-style-kndsb-table table {
+.wp-block-table table {
   border-collapse: collapse;
   margin: 0;
   width: 100%;
 }
 
 .kndsb-table :where(table, th, td),
-.wp-block-table.is-style-kndsb-table :where(table, th, td) {
+.wp-block-table :where(table, th, td) {
   border: 0;
   box-shadow: none;
 }
 
 .kndsb-table__heading,
-.wp-block-table.is-style-kndsb-table thead th {
+.wp-block-table thead th {
   background-color: #fff;
   color: var(--kndsb-color-blue);
   font-size: .9375rem;
@@ -29,7 +29,7 @@
 }
 
 .kndsb-table__heading::after,
-.wp-block-table.is-style-kndsb-table thead th::after {
+.wp-block-table thead th::after {
   background-color: var(--kndsb-color-orange);
   bottom: 0;
   content: "";
@@ -40,27 +40,27 @@
 }
 
 .kndsb-table__cell,
-.wp-block-table.is-style-kndsb-table td {
+.wp-block-table td {
   color: #222;
   font-size: .9375rem;
   padding: 1.25rem 1rem;
 }
 
 .kndsb-table__row,
-.wp-block-table.is-style-kndsb-table tbody tr {
+.wp-block-table tbody tr {
   border-bottom: 1px solid rgba(0, 0, 0, .08);
 }
 
 @media screen and (min-width: 761px) {
   .kndsb-table,
-  .wp-block-table.is-style-kndsb-table {
+  .wp-block-table {
     margin-block: 1.5rem 2.5rem;
   }
 }
 
 @media screen and (min-width: 1100px) {
   .kndsb-table,
-  .wp-block-table.is-style-kndsb-table {
+  .wp-block-table {
     margin-block: 2rem 3rem;
   }
 }

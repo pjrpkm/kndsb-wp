@@ -12,8 +12,8 @@
   font-size: .8rem;
   font-weight: 700;
   letter-spacing: .08em;
-  line-height: 1.2 !important;
-  margin: 0 0 .5rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
   text-transform: uppercase;
 }
 
@@ -28,26 +28,17 @@
   margin: 0;
 }
 
-.kndsb-board-page__intro {
-  color: #4e6071;
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  line-height: 1.7 !important;
-  margin: 1.5rem 0 0;
-  max-width: 46rem;
-}
-
-/* Generic page shell: keep the lead paragraph close to the page title, then
- * start the actual board content on the normal section rhythm. */
+.kndsb-board-page__intro,
 .kndsb-page__content > .wp-block-paragraph:first-child {
   color: #4e6071;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
   line-height: 1.7;
-  margin: 1.5rem 0 0;
+  margin: 24px 0 0;
   max-width: 46rem;
 }
 
 .kndsb-page__content > .wp-block-paragraph:first-child + .wp-block-kndsb-board-members {
-  margin-top: var(--kndsb-section-medium);
+  margin-top: 64px;
 }
 
 .kndsb-board-page__members-section {
@@ -57,12 +48,13 @@
 .kndsb-board-page__section-title {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   line-height: 1.1;
-  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0 0 32px;
 }
 
-.kndsb-board-page__grid {
+.kndsb-board-page__grid,
+.kndsb-board-page__news-grid {
   display: grid;
-  gap: clamp(1rem, 2.5vw, 1.5rem);
+  gap: 24px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -73,7 +65,7 @@
 
 .editor-styles-wrapper .kndsb-board-page__grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
   display: grid;
-  gap: clamp(1rem, 2.5vw, 1.5rem);
+  gap: 24px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -94,7 +86,7 @@
 }
 
 .kndsb-board-card__image-button {
-  bottom: .75rem;
+  bottom: 16px;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
@@ -109,14 +101,14 @@
 }
 
 .kndsb-board-card__body {
-  padding: 1.25rem;
+  padding: 24px;
 }
 
 .kndsb-board-card__role {
   color: #66717d;
   font-size: .82rem;
-  line-height: 1.3 !important;
-  margin: 0 0 .45rem;
+  line-height: 1.3;
+  margin: 0 0 8px;
 }
 
 .kndsb-board-card__name {
@@ -130,20 +122,20 @@
   align-items: center;
   border-top: 1px solid rgba(37, 55, 128, .12);
   display: flex;
-  gap: .25rem;
-  margin-top: 1rem;
-  padding-top: .75rem;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
 }
 
 .kndsb-board-block-editor > .components-button {
-  margin-top: 1.25rem;
+  margin-top: 24px;
 }
 
 .kndsb-board-documents {
   display: flex;
   flex-wrap: wrap;
-  gap: .75rem;
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  gap: 16px;
+  margin-top: 32px;
 }
 
 .kndsb-board-documents__button {
@@ -151,13 +143,13 @@
   background: var(--kndsb-color-blue, #253780);
   border: 1px solid var(--kndsb-color-blue, #253780);
   border-radius: var(--kndsb-radius, .35rem);
-  color: #fff !important;
+  color: #fff;
   display: inline-flex;
   font-weight: 700;
-  gap: 1rem;
+  gap: 16px;
   justify-content: space-between;
   min-width: min(100%, 15rem);
-  padding: .9rem 1rem;
+  padding: 16px;
   text-decoration: none;
 }
 
@@ -201,9 +193,9 @@
 }
 
 .kndsb-board-vacancy__media-controls {
-  bottom: .75rem;
+  bottom: 16px;
   display: flex;
-  gap: .5rem;
+  gap: 8px;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
@@ -214,58 +206,47 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 24px;
 }
 
 .kndsb-board-vacancy__role {
   font-size: .82rem;
-  margin: 0 0 .45rem;
+  margin: 0 0 8px;
   opacity: .86;
 }
 
 .kndsb-board-vacancy__title {
   color: #fff;
   font-size: 1.25rem;
-  margin: 0 0 .75rem;
+  margin: 0 0 16px;
 }
 
 .kndsb-board-vacancy__description {
-  line-height: 1.55 !important;
+  line-height: 1.55;
   margin: 0;
 }
 
 .kndsb-board-vacancy__link {
   align-items: center;
-  color: #fff !important;
+  color: #fff;
   display: inline-flex;
   font-weight: 700;
-  gap: .5rem;
+  gap: 8px;
   margin-top: auto;
-  padding-top: 1.25rem;
+  padding-top: 24px;
   text-decoration: none;
 }
 
-.kndsb-board-page__news-grid {
-  display: grid;
-  gap: clamp(1.25rem, 2.5vw, 2rem);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-/* The board page now renders through the generic Gutenberg shell, so the
- * news-row no longer has the old page-specific wrapper class. Keep it on the
- * full container width and retain the intended three-card layout. */
+.kndsb-board-page__news-section,
 .kndsb-page__content > .wp-block-kndsb-news-row {
-  margin-top: var(--kndsb-section-medium);
+  margin-top: 64px;
   width: 100%;
 }
 
+.kndsb-board-page__news-section .kndsb-news-row__items,
 .kndsb-page__content > .wp-block-kndsb-news-row .kndsb-news-row__items {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
-}
-
-.kndsb-board-page__news-section .kndsb-news-row__items {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 @media (max-width: 900px) {
@@ -273,7 +254,9 @@
   .kndsb-board-page__news-grid,
   .kndsb-board-page__news-section .kndsb-news-row__items,
   .kndsb-page__content > .wp-block-kndsb-news-row .kndsb-news-row__items,
-  .editor-styles-wrapper .kndsb-board-page__grid > .block-editor-inner-blocks > .block-editor-block-list__layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .editor-styles-wrapper .kndsb-board-page__grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 600px) {
@@ -281,5 +264,7 @@
   .kndsb-board-page__news-grid,
   .kndsb-board-page__news-section .kndsb-news-row__items,
   .kndsb-page__content > .wp-block-kndsb-news-row .kndsb-news-row__items,
-  .editor-styles-wrapper .kndsb-board-page__grid > .block-editor-inner-blocks > .block-editor-block-list__layout { grid-template-columns: 1fr; }
+  .editor-styles-wrapper .kndsb-board-page__grid > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    grid-template-columns: 1fr;
+  }
 }

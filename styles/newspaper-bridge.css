@@ -29,8 +29,10 @@
 }
 
 /*
- * Newspaper applies its own borders to generic tables. Gutenberg tables are
- * owned by the KNDSB table component, so neutralize those legacy borders here.
+ * Newspaper applies its own borders and header decoration to generic tables.
+ * Gutenberg tables are owned by the KNDSB table component, so neutralize the
+ * legacy treatment here. table.css deliberately keeps th::after for the
+ * KNDSB orange header rule.
  */
 .wp-block-table table,
 .wp-block-table thead,
@@ -43,6 +45,22 @@
   border-right: 0 !important;
   border-top: 0 !important;
   box-shadow: none !important;
+}
+
+.wp-block-table thead,
+.wp-block-table thead tr,
+.wp-block-table thead th {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.wp-block-table thead::before,
+.wp-block-table thead::after,
+.wp-block-table thead tr::before,
+.wp-block-table thead tr::after,
+.wp-block-table thead th::before {
+  content: none !important;
+  display: none !important;
 }
 
 @media (max-width: 767px) {

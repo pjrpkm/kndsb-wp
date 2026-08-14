@@ -3,7 +3,7 @@
 }
 
 .kndsb-article-content {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "basic-sans", sans-serif;
   font-size: 17px;
   line-height: 31px;
 }
@@ -14,13 +14,13 @@
 }
 
 .kndsb-article-content .wp-block-table :where(th, td) {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "basic-sans", sans-serif;
   font-size: 15px;
 }
 
 :where(.kndsb-site.single) :where(p, li, td, th),
 :where(.single .kndsb-site) :where(p, li, td, th) {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "basic-sans", sans-serif;
   font-weight: 400;
 }
 
@@ -72,6 +72,6 @@
 
 .kndsb-page-intro__text,
 .kndsb-board-page__intro {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "basic-sans", sans-serif;
   font-weight: 400;
 }

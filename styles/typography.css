@@ -55,11 +55,19 @@
 :where(.kndsb-site) :where(h1, h2, h3, h4, h5, h6),
 .kndsb-page-intro__title,
 .kndsb-page-intro__eyebrow {
-  color: var(--kndsb-color-heading);
   font-family: "basic-sans", sans-serif;
   font-weight: 700;
   line-height: 1.1;
   margin-block: 0 .75em;
+}
+
+:where(.kndsb-site) :where(h1, h2, h3, h4, h5, h6),
+.kndsb-page-intro__title {
+  color: var(--kndsb-color-heading);
+}
+
+.kndsb-page-intro__eyebrow {
+  color: var(--kndsb-color-orange);
 }
 
 .kndsb-page-intro__text,

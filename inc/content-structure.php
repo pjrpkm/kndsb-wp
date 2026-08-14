@@ -8,6 +8,26 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Force the modern child-theme template for the legacy Documenten page.
+ *
+ * The page still has Newspaper's page-pagebuilder-title.php stored as its
+ * assigned template. An explicitly assigned page template takes precedence
+ * over page-{slug}.php in WordPress, so page-documenten.php would otherwise
+ * never be selected until the page setting is manually changed.
+ */
+function kndsb_documents_page_template( $template ) {
+	if ( is_page( 'documenten' ) ) {
+		$documents_template = KNDSB_CHILD_PATH . 'page-documenten.php';
+		if ( file_exists( $documents_template ) ) {
+			return $documents_template;
+		}
+	}
+
+	return $template;
+}
+add_filter( 'template_include', 'kndsb_documents_page_template', 99 );
+
+/**
  * Replace an old outer Group wrapper with the fixed Client-First hierarchy.
  */
 function kndsb_wrap_legacy_sport_section( $block_content, $block ) {

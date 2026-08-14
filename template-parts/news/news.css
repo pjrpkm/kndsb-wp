@@ -9,17 +9,20 @@
 
 .kndsb-news-archive__eyebrow {
   color: var(--kndsb-color-orange);
+  font-family: "basic-sans", sans-serif;
   font-size: .8rem;
   font-weight: 700;
   letter-spacing: .08em;
-  line-height: 1.2 !important;
+  line-height: 1.2;
   margin: 0 0 .5rem;
   text-transform: uppercase;
 }
 
 .kndsb-news-archive__title {
   color: var(--kndsb-color-blue, #253780);
+  font-family: "basic-sans", sans-serif;
   font-size: clamp(2.25rem, 5vw, 4.25rem);
+  font-weight: 700;
   line-height: 1;
   margin: 0;
 }
@@ -29,26 +32,6 @@
   gap: clamp(1.25rem, 2.5vw, 2rem);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .kndsb-news-archive__pagination {
   align-items: center;
@@ -83,4 +66,3 @@
 @media (max-width: 600px) {
   .kndsb-news-archive__grid { grid-template-columns: 1fr; }
 }
-

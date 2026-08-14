@@ -22,7 +22,7 @@ $show_page_intro = ! is_front_page() && ! $is_individual_sport;
 		<section class="section_page-intro">
 			<div class="padding-global">
 				<div class="container-large">
-					<div class="padding-section-medium">
+					<div class="padding-section-medium padding-bottom-none">
 						<header class="kndsb-page-intro wp-block-kndsb-page-intro">
 							<?php if ( $parent_id ) : ?>
 								<p class="kndsb-page-intro__eyebrow"><?php echo esc_html( get_the_title( $parent_id ) ); ?></p>

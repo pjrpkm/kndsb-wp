@@ -224,7 +224,7 @@ function kndsb_render_news_row( $attributes ) {
 	?>
 	<section <?php echo $wrapper; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<header class="kndsb-news-row__header">
-			<h2 class="kndsb-news-row__title"><?php echo esc_html( $display_title ); ?></h2>
+			<h2 class="kndsb-page__section-title"><?php echo esc_html( $display_title ); ?></h2>
 			<?php if ( $is_home_row && $archive_url && ! is_wp_error( $archive_url ) ) : ?>
 				<a class="kndsb-news-row__heading-link" href="<?php echo esc_url( $archive_url ); ?>"><?php esc_html_e( 'Toon alle artikelen', 'kndsb' ); ?><span aria-hidden="true">›</span></a>
 			<?php endif; ?>

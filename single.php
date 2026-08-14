@@ -22,7 +22,7 @@ get_header();
 			<?php endif; ?>
 
 			<div class="padding-global kndsb-article__container-wrap<?php echo has_post_thumbnail() ? ' kndsb-article__container-wrap--overlap' : ''; ?>">
-				<div class="container-small">
+				<div class="container-large">
 					<div class="kndsb-article__container">
 						<header class="kndsb-article__heading">
 							<h1 class="kndsb-article__title"><?php the_title(); ?></h1>

@@ -11,9 +11,11 @@ defined( 'ABSPATH' ) || exit;
  * Newspaper pagebuilder templates may still be stored in _wp_page_template on
  * existing pages. Treat those assignments as obsolete: KNDSB owns the page
  * shell and Gutenberg owns the content.
+ *
+ * Dedicated KNDSB route templates (such as page-nieuws.php) remain untouched.
  */
 function kndsb_use_default_page_template( $template ) {
-	if ( ! is_page() ) {
+	if ( ! is_page() || is_page( 'nieuws' ) ) {
 		return $template;
 	}
 

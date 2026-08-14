@@ -36,6 +36,20 @@
   max-width: 46rem;
 }
 
+/* Generic page shell: keep the lead paragraph close to the page title, then
+ * start the actual board content on the normal section rhythm. */
+.kndsb-page__content > .wp-block-paragraph:first-child {
+  color: #4e6071;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.7;
+  margin: 1.5rem 0 0;
+  max-width: 46rem;
+}
+
+.kndsb-page__content > .wp-block-paragraph:first-child + .wp-block-kndsb-board-members {
+  margin-top: var(--kndsb-section-medium);
+}
+
 .kndsb-board-page__members-section {
   background: var(--kndsb-color-blue-white, #f1f6fa);
 }
@@ -237,18 +251,28 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+/* The board page now renders through the generic Gutenberg shell, so the
+ * news-row no longer has the old page-specific wrapper class. Keep it on the
+ * full container width and retain the intended three-card layout. */
+.kndsb-page__content > .wp-block-kndsb-news-row {
+  margin-top: var(--kndsb-section-medium);
+  width: 100%;
+}
+
+.kndsb-page__content > .wp-block-kndsb-news-row .kndsb-news-row__items {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+}
+
 .kndsb-board-page__news-section .kndsb-news-row__items {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-
-
-
-
 
 @media (max-width: 900px) {
   .kndsb-board-page__grid,
   .kndsb-board-page__news-grid,
   .kndsb-board-page__news-section .kndsb-news-row__items,
+  .kndsb-page__content > .wp-block-kndsb-news-row .kndsb-news-row__items,
   .editor-styles-wrapper .kndsb-board-page__grid > .block-editor-inner-blocks > .block-editor-block-list__layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -256,5 +280,6 @@
   .kndsb-board-page__grid,
   .kndsb-board-page__news-grid,
   .kndsb-board-page__news-section .kndsb-news-row__items,
+  .kndsb-page__content > .wp-block-kndsb-news-row .kndsb-news-row__items,
   .editor-styles-wrapper .kndsb-board-page__grid > .block-editor-inner-blocks > .block-editor-block-list__layout { grid-template-columns: 1fr; }
 }

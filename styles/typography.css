@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :where(.kndsb-site) :where(p, div, span, a, li, td, th) {
   font-family: inherit;
+}
+
+:where(.kndsb-site.single) :where(p, li, td, th),
+:where(.single .kndsb-site) :where(p, li, td, th) {
+  font-family: "Inter", sans-serif;
 }
 
 :where(.kndsb-site) :where(p) {

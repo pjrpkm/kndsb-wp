@@ -78,7 +78,18 @@
 /* Related articles use the global KNDSB editorial post-card component. */
 .kndsb-related { background: var(--kndsb-color-blue-white); padding: 64px var(--kndsb-page-gutter) 80px; }
 .kndsb-related__inner { margin: 0 auto; max-width: 950px; width: 100%; }
-.kndsb-related__title { color: var(--kndsb-color-blue); font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1; margin: 0 0 32px; }
+.kndsb-related__title {
+  align-self: center;
+  background: transparent;
+  color: var(--kndsb-color-blue, #253780);
+  font-size: clamp(1.6rem, 2.2vw, 1.95rem);
+  font-weight: 700;
+  line-height: 1.08;
+  margin: 0 0 32px !important;
+  padding: 0;
+  text-align: left;
+  text-transform: none;
+}
 .kndsb-related__grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 @media (max-width: 950px) {

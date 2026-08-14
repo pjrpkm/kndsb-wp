@@ -45,12 +45,10 @@ get_header();
 				'post__not_in'        => array( get_the_ID() ),
 				'ignore_sticky_posts' => true,
 			);
-
 			$category_ids = wp_get_post_categories( get_the_ID() );
 			if ( ! empty( $category_ids ) ) {
 				$related_args['category__in'] = $category_ids;
 			}
-
 			$related_articles = new WP_Query( $related_args );
 			?>
 			<?php if ( $related_articles->have_posts() ) : ?>
@@ -59,18 +57,22 @@ get_header();
 						<h2 id="kndsb-related-title" class="kndsb-related__title">Gerelateerde artikelen</h2>
 						<div class="kndsb-related__grid">
 							<?php while ( $related_articles->have_posts() ) : $related_articles->the_post(); ?>
-								<article class="kndsb-related__card">
-									<a class="kndsb-related__link" href="<?php the_permalink(); ?>">
+								<article <?php post_class( 'kndsb-post-card' ); ?>>
+									<a class="kndsb-post-card__media" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr( get_the_title() ); ?>">
 										<?php if ( has_post_thumbnail() ) : ?>
-											<div class="kndsb-related__image-wrap">
-												<?php the_post_thumbnail( 'medium_large', array( 'class' => 'kndsb-related__image', 'loading' => 'lazy' ) ); ?>
-											</div>
+											<?php the_post_thumbnail( 'medium_large', array( 'class' => 'kndsb-post-card__image', 'loading' => 'lazy' ) ); ?>
+										<?php else : ?>
+											<span class="kndsb-post-card__placeholder" aria-hidden="true"></span>
 										<?php endif; ?>
-										<div class="kndsb-related__content">
-											<time class="kndsb-related__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time>
-											<h3 class="kndsb-related__card-title"><?php the_title(); ?></h3>
-										</div>
 									</a>
+									<div class="kndsb-post-card__body">
+										<time class="kndsb-post-card__date" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time>
+										<h3 class="kndsb-post-card__title"><a class="kndsb-post-card__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+										<?php if ( has_excerpt() || get_the_content() ) : ?>
+											<p class="kndsb-post-card__excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 18 ) ); ?></p>
+										<?php endif; ?>
+										<a class="kndsb-post-card__read-more" href="<?php the_permalink(); ?>">Lees meer <span aria-hidden="true">→</span></a>
+									</div>
 								</article>
 							<?php endwhile; ?>
 						</div>

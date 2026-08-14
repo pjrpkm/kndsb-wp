@@ -23,7 +23,7 @@
 .kndsb-article__container-wrap {
   background: transparent;
   display: flow-root;
-  padding: 0 var(--kndsb-page-gutter) clamp(3rem, 7vw, 5.5rem);
+  padding: 0 var(--kndsb-page-gutter);
   position: relative;
 }
 .kndsb-article__container {
@@ -36,42 +36,14 @@
   width: 100%;
   z-index: 2;
 }
-.kndsb-article__container-wrap--overlap .kndsb-article__container {
-  margin-top: -360px;
-}
+.kndsb-article__container-wrap--overlap .kndsb-article__container { margin-top: -360px; }
 
 .kndsb-article__heading { border-bottom: 1px solid var(--kndsb-color-border); }
-.kndsb-article__title {
-  color: var(--kndsb-color-blue);
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: -.025em;
-  line-height: 1.08;
-  margin: 0;
-  padding-bottom: 30px;
-  text-wrap: balance;
-}
-.kndsb-article__date {
-  color: var(--kndsb-color-muted);
-  display: block;
-  font-size: .9375rem;
-  margin: 20px 0 25px;
-}
-.kndsb-article__featured-caption {
-  color: var(--kndsb-color-muted);
-  font-size: .8125rem;
-  line-height: 1.45;
-  margin: 0 0 25px;
-}
+.kndsb-article__title { color: var(--kndsb-color-blue); font-size: 38px; font-weight: 700; letter-spacing: -.025em; line-height: 1.08; margin: 0; padding-bottom: 30px; text-wrap: balance; }
+.kndsb-article__date { color: var(--kndsb-color-muted); display: block; font-size: .9375rem; margin: 20px 0 25px; }
+.kndsb-article__featured-caption { color: var(--kndsb-color-muted); font-size: .8125rem; line-height: 1.45; margin: 0 0 25px; }
 
-.kndsb-article-content {
-  color: var(--kndsb-color-ink);
-  font-size: 17px !important;
-  line-height: 31px;
-  margin-top: 30px;
-  min-width: 0;
-  overflow-wrap: break-word;
-}
+.kndsb-article-content { color: var(--kndsb-color-ink); font-size: 17px !important; line-height: 31px; margin-top: 30px; min-width: 0; overflow-wrap: break-word; }
 .kndsb-article-content > :first-child { margin-top: 0; }
 .kndsb-article-content > :last-child { margin-bottom: 0; }
 .kndsb-article-content > * { max-width: 100%; }
@@ -101,6 +73,19 @@
 .kndsb-article-content > .alignwide { margin-left: 50%; max-width: var(--kndsb-container-main); transform: translateX(-50%); width: calc(100vw - (2 * var(--kndsb-page-gutter))); }
 .kndsb-article-content > .alignfull { margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; max-width: 100vw !important; transform: none; width: 100vw !important; }
 
+.kndsb-related { background: var(--kndsb-color-blue-white); padding: 64px var(--kndsb-page-gutter) 80px; }
+.kndsb-related__inner { margin: 0 auto; max-width: 1280px; }
+.kndsb-related__title { color: var(--kndsb-color-blue); font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1; margin: 0 0 32px; }
+.kndsb-related__grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kndsb-related__card { background: var(--kndsb-color-white); min-width: 0; }
+.kndsb-related__link { color: inherit; display: block; height: 100%; text-decoration: none; }
+.kndsb-related__image-wrap { aspect-ratio: 16 / 9; overflow: hidden; }
+.kndsb-related__image { display: block; height: 100%; object-fit: cover; transition: transform .25s ease; width: 100%; }
+.kndsb-related__link:hover .kndsb-related__image { transform: scale(1.025); }
+.kndsb-related__content { padding: 24px; }
+.kndsb-related__date { color: var(--kndsb-color-muted); display: block; font-size: .8125rem; margin-bottom: 10px; }
+.kndsb-related__card-title { color: var(--kndsb-color-blue); font-size: 1.25rem; line-height: 1.25; margin: 0; }
+
 @media (max-width: 950px) {
   .kndsb-article__container-wrap { padding-left: 0; padding-right: 0; }
   .kndsb-article__container { padding: 60px 20px; }
@@ -113,11 +98,14 @@
   .kndsb-article__container { padding: 40px 20px; }
   .kndsb-article__title { font-size: 24px; padding-bottom: 20px; }
   .kndsb-article-content { margin-top: 20px; }
+  .kndsb-related { padding-top: 48px; }
+  .kndsb-related__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
   .kndsb-article__container { padding: 20px; }
   .kndsb-article__title { font-size: 18px; }
+  .kndsb-related { padding-left: 20px; padding-right: 20px; }
 }
 
 /* Gutenberg editor: keep reading typography aligned with the frontend. */

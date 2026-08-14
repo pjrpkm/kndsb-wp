@@ -37,7 +37,7 @@
   z-index: 2;
 }
 .kndsb-article__container-wrap--overlap .kndsb-article__container {
-  margin-top: -140px;
+  margin-top: -360px;
 }
 
 .kndsb-article__heading { border-bottom: 1px solid var(--kndsb-color-border); }

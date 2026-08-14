@@ -2,8 +2,8 @@
   font-family: inherit;
 }
 
-:where(.kndsb-site.single) :where(p, li),
-:where(.single .kndsb-site) :where(p, li) {
+:where(.kndsb-site.single) :where(p, li, td, th),
+:where(.single .kndsb-site) :where(p, li, td, th) {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 400;
 }
